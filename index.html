@@ -371,7 +371,7 @@ html{scroll-padding-top:96px;scroll-behavior:auto!important}
   <div class="section-h"><div><h2>07 · Procurement Control Tower</h2><p>Final management view connecting customer-level RFM + NPS + ABCD, operational SPO priority, demand, purchase commitments, supplier exposure, cash, lead time, evidence quality and SLA readiness.</p></div><span class="tag">OUTPUT 3 · MANAGEMENT</span></div>
   <div class="kpis" id="controlKpis"></div>
   <div class="grid2" style="margin-top:16px"><div class="card"><h3>ABCD management reading</h3><div id="controlABCD">—</div></div><div class="card"><h3>Procurement gates</h3><div id="controlGates">—</div></div></div>
-  <div class="toolbar no-print" style="margin-top:16px"><button class="btn btn-secondary" onclick="downloadDashboardCSV()">Download Dashboard CSV</button><button class="btn btn-primary" onclick="printSection('sec7')">Print / Save PDF</button></div>
+  <div class="toolbar no-print" style="margin-top:16px"><button class="btn btn-secondary" onclick="downloadDashboardCSV()">Download Full Data Model CSV</button><button class="btn btn-primary" onclick="printSection('sec7')">Print / Save PDF</button></div>
 <div class="tab-nav-row no-print"><button class="btn btn-secondary" onclick="activateTab('sec6')">← Previous</button><button class="btn btn-secondary" onclick="activateTab('sec0')">Return to start ↑</button></div></div></section>
 </main>
   </div>
@@ -785,7 +785,146 @@ function downloadABCDCSV(){const rows=rowsWithModel();const headers=['offer_id',
 function downloadSupplierCSV(){const headers=['supplier_id','supplier_name','country','role','item_type','demand_driver','scope','item_sku','item_name','qty_factor','unit_cost_eur','moq_units','case_pack_units','available_stock_units','reserved_stock_units','confirmed_inbound_units','safety_stock_units','loss_pct','production_lead_days','freight_lead_days','customs_lead_days','fiscal_release_lead_days','payment_terms_days','incoterm'];const rows=suppliers.map(s=>({supplier_id:s.supplier_id,supplier_name:s.supplier_name,country:s.country,role:s.role,item_type:s.item_type,demand_driver:s.demand_driver||'UNIT',scope:s.scope,item_sku:s.item_sku,item_name:s.item_name,qty_factor:s.qty_factor,unit_cost_eur:s.unit_cost,moq_units:s.moq,case_pack_units:s.case_pack,available_stock_units:s.available,reserved_stock_units:s.reserved,confirmed_inbound_units:s.inbound,safety_stock_units:s.safety,loss_pct:s.loss_pct,production_lead_days:s.lt_production,freight_lead_days:s.lt_freight,customs_lead_days:s.lt_customs,fiscal_release_lead_days:s.lt_fiscal,payment_terms_days:s.payment_days,incoterm:s.incoterm}));downloadFile('DOC_ROI_Procurement_Supplier_Setup.csv',toCSV(rows,headers))}
 function downloadPOCSV(){const headers=['po_id','supplier_id','supplier_name','item_sku','item_name','abcd_scope','mapped_demand','order_quantity','unit_cost_eur','purchase_value_eur','payment_terms_days','incoterm','total_lead_days','required_saleable_date','suggested_po_date','status','blocking_evidence'];const rows=(model.plans||[]).map((p,i)=>({po_id:'PO-'+String(i+1).padStart(3,'0')+'-'+(p.supplier_id||'SUP'),supplier_id:p.supplier_id,supplier_name:p.supplier_name,item_sku:p.item_sku,item_name:p.item_name,abcd_scope:p.scope,mapped_demand:p.mappedDemand,order_quantity:p.orderQty,unit_cost_eur:p.unit_cost,purchase_value_eur:p.purchaseValue,payment_terms_days:p.payment_days,incoterm:p.incoterm,total_lead_days:p.totalLead,required_saleable_date:p.requiredDate,suggested_po_date:p.poDate,status:p.ready?'READY FOR HUMAN APPROVAL':'CONDITIONAL',blocking_evidence:p.missing.join('; ')}));downloadFile('DOC_ROI_Purchase_Orders.csv',toCSV(rows,headers))}
 function downloadSLACSV(){const slas=model.slas||[];const headers=['sla_id','supplier_id','supplier_name','role','item_name','metric','target','unit','rule','evidence','actual','status'];const rows=slas.flatMap(s=>s.metrics.map(m=>({sla_id:s.sla_id,supplier_id:s.supplier_id,supplier_name:s.supplier_name,role:s.role,item_name:s.item_name,metric:m.metric,target:m.target,unit:m.unit,rule:m.rule,evidence:m.evidence,actual:'',status:'UNKNOWN'})));downloadFile('DOC_ROI_Procurement_SLA_Handover.csv',toCSV(rows,headers))}
-function downloadDashboardCSV(){const rows=rowsWithModel(),plans=model.plans||[];const out=[];rows.forEach(r=>out.push({type:'ABCD_DEMAND',id:r.offer_id,name:r.offer_name,metric:'ABCD class',value:r.abcd_class,detail:(r.abcd_source||'ABCD')+' · Score '+fmt(r.abcd_score)}),out.push({type:'ABCD_DEMAND',id:r.offer_id,name:r.offer_name,metric:'Demand signal',value:r.demand_model.demand,detail:r.demand_model.complete?'Complete':'Partial'}));spoRows.slice(0,50000).forEach(r=>out.push({type:'SPO_WORKING',id:r.customer_key,name:r.primary_product_name,metric:'SPO priority',value:r.spo_working_normalized_100,detail:'RFM '+fmt(r.rfm_operational_factor)+' · NPS '+fmt(r.nps_operational_factor)+' · ABCD '+r.abcd_class}));plans.forEach(p=>out.push({type:'PROCUREMENT',id:p.supplier_id,name:p.supplier_name,metric:'Order quantity',value:p.orderQty,detail:'SPO '+fmt(p.spoPriority)+' · Purchase value '+money(p.purchaseValue)}));const headers=['type','id','name','metric','value','detail'];downloadFile('DOC_ROI_Procurement_Control_Tower.csv',toCSV(out,headers))}
+function dataModelSlug(v){return text(v).trim().toLowerCase().replace(/[^a-z0-9]+/g,'_').replace(/^_+|_+$/g,'')||'field'}
+function dataModelValue(v){if(v===null||v===undefined)return '';if(Array.isArray(v))return v.map(dataModelValue).join(' | ');if(typeof v==='object')return Object.entries(v).map(([k,x])=>`${k}=${dataModelValue(x)}`).join(' | ');return v}
+function addPrefixedFields(target,prefix,obj,skip=[]){if(!obj)return target;Object.keys(obj).forEach(k=>{if(skip.includes(k))return;target[prefix+k]=dataModelValue(obj[k])});return target}
+function allKnownSum(values){return values.every(v=>v!==null)?values.reduce((a,b)=>a+b,0):null}
+function modelCommercialForMarketing(m,modeled){if(!m)return null;const tag=text(m.active_benefit_type||m.entry_4p).trim();const pid=text(m.product_id||m.sku).trim();return modeled.find(r=>text(r.four_p_tag).trim()===tag&&(!pid||!text(r.product_id).trim()||text(r.product_id).trim()===pid))||modeled.find(r=>text(r.four_p_tag).trim()===tag)||modeled.find(r=>pid&&text(r.product_id).trim()===pid)||null}
+function fullDataModelRows(){
+  buildSPOWorking();
+  const modeled=rowsWithModel();
+  const plans=(model.planOrder&&model.planOrder.length?model.planOrder:(model.plans||[]));
+  const slas=model.slas||[];
+  const rMap=new Map(rfmRows.map(r=>[text(r.customer_key).trim(),r]));
+  const nMap=new Map(npsRows.map(r=>[text(r.customer_key).trim(),r]));
+  const aMap=new Map(abcdCustomerRows.map(r=>[text(r.customer_key).trim(),r]));
+  const sMap=new Map(spoRows.map(r=>[text(r.customer_key).trim(),r]));
+  const buyer=buyerPersonaRows[0]||null;
+  const buyerLens=buyerPersonaProcurementLens(buyer);
+  const demandKnown=modeled.map(r=>r.demand_model?.demand??null).filter(v=>v!==null);
+  const globalDemand=demandKnown.length===modeled.length&&modeled.length?demandKnown.reduce((a,b)=>a+b,0):null;
+  const globalPurchaseValue=plans.length&&plans.every(p=>p.purchaseValue!==null)?plans.reduce((a,p)=>a+p.purchaseValue,0):null;
+  const globalLongestLead=plans.map(p=>p.totalLead).filter(v=>v!==null);const globalLongest=globalLongestLead.length?Math.max(...globalLongestLead):null;
+  const globalReady=plans.filter(p=>p.ready).length;
+  const knownABCD=modeled.filter(r=>r.abcd_class!=='UNKNOWN').length;
+  const confidence=modeled.length?Math.round(modeled.reduce((sum,r)=>sum+(r.demand_model?.complete?1:0)+(r.abcd_class!=='UNKNOWN'?1:0),0)/(modeled.length*2)*100):0;
+  const spoVals=spoRows.map(r=>num(r.spo_working_normalized_100)).filter(v=>v!==null);const globalAvgSPO=spoVals.length?spoVals.reduce((a,b)=>a+b,0)/spoVals.length:null;
+  let bases=[];
+  if(marketingRows.length)bases=marketingRows.map((m,i)=>({grain:'customer_order',index:i+1,marketing:m,customer_key:text(m.customer_key).trim()}));
+  else if(spoRows.length)bases=spoRows.map((sp,i)=>({grain:'customer',index:i+1,marketing:null,customer_key:text(sp.customer_key).trim()}));
+  else if(modeled.length)bases=modeled.map((c,i)=>({grain:'offer',index:i+1,marketing:null,customer_key:'',commercial:c}));
+  else bases=[{grain:'session',index:1,marketing:null,customer_key:''}];
+  return bases.map(base=>{
+    const m=base.marketing;
+    const k=base.customer_key;
+    const r=k?rMap.get(k)||null:null,n=k?nMap.get(k)||null:null,a=k?aMap.get(k)||null:null,sp=k?sMap.get(k)||null:null;
+    const c=base.commercial||modelCommercialForMarketing(m,modeled);
+    const applicablePlans=plans.filter(p=>p.scope==='ALL'||(c&&p.scope===c.offer_id));
+    const out={
+      export_schema_version:'DOCROI_PROCUREMENT_FULL_DATA_MODEL_1.0',
+      export_generated_at:new Date().toISOString(),
+      export_record_grain:base.grain,
+      export_row_number:base.index,
+      export_model:'DOC ROI · PROCUREMENT COMPASS · EVIDENCE + ABCD + SPO + S',
+      export_case_detected:(marketingRows.length===266&&marketingRows.every(x=>text(x.customer_key).startsWith('DE-')))?'Don Espadín example':'User / current session',
+      evidence_gate_status:evidenceGateReady()?'READY':'OPEN',
+      quality_marketing_loaded:marketingRows.length?1:0,
+      quality_objectives_loaded:objectiveRows.length?1:0,
+      quality_buyer_persona_loaded:buyerPersonaRows.length?1:0,
+      quality_rfm_match:r?1:0,
+      quality_nps_match:n?1:0,
+      quality_abcd_match:a?1:0,
+      quality_spo_match:sp?1:0,
+      quality_temporal_alignment:sp?.temporal_alignment_status||'',
+      global_spo_customer_count:spoRows.length,
+      global_avg_spo_priority_100:globalAvgSPO,
+      global_portfolio_demand_units:globalDemand,
+      global_supplier_plan_count:plans.length,
+      global_purchase_value_eur:globalPurchaseValue,
+      global_longest_lead_time_days:globalLongest,
+      global_po_ready_count:globalReady,
+      global_po_readiness_pct:plans.length?globalReady/plans.length*100:null,
+      global_evidence_confidence_pct:confidence,
+      global_abcd_known_offer_count:knownABCD,
+      global_abcd_offer_count:modeled.length,
+      config_abcd_rotation_weight_pct:num($('wRot')?.value),
+      config_abcd_margin_weight_pct:num($('wMargin')?.value),
+      config_abcd_stock_efficiency_weight_pct:num($('wStock')?.value),
+      config_abcd_target_turnover:num($('targetTurnover')?.value),
+      config_abcd_threshold_A:num($('thrA')?.value),
+      config_abcd_threshold_B:num($('thrB')?.value),
+      config_abcd_threshold_C:num($('thrC')?.value),
+      governance_buyer_name:$('buyerName')?.value||'',governance_buyer_tax_id:$('buyerTaxId')?.value||'',governance_buyer_address:$('buyerAddress')?.value||'',
+      governance_effective_date:$('effectiveDate')?.value||'',governance_review_cadence:$('reviewCadence')?.value||'',governance_jurisdiction:$('jurisdiction')?.value||'',governance_sla_data_source:$('slaDataSource')?.value||'',governance_sla_exclusions:$('slaExclusions')?.value||'',governance_sla_remedy:$('slaRemedy')?.value||'',
+      governance_base_otif_target_pct:num($('slaOtif')?.value),governance_base_po_ack_target_hours:num($('slaAck')?.value),governance_base_documentation_target_pct:num($('slaDocs')?.value),governance_base_traceability_target_pct:num($('slaTrace')?.value),governance_base_incoming_quality_target_pct:num($('slaQuality')?.value),governance_base_inventory_accuracy_target_pct:num($('slaInventory')?.value),governance_base_breakage_loss_target_pct:num($('slaBreakage')?.value),governance_base_incident_response_target_hours:num($('slaIncident')?.value),
+      buyer_persona_manual_label:$('buyerPersona')?.value||'',buyer_persona_manual_context:$('buyerContext')?.value||'',
+      buyer_persona_procurement_primary_4p:buyerLens?.top||'',buyer_persona_procurement_secondary_4p:buyerLens?.second||'',buyer_persona_procurement_implications:buyerLens?.implications?.join(' | ')||'',buyer_persona_procurement_top_keywords:buyerLens?.topKeywords?.join(' | ')||''
+    };
+    addPrefixedFields(out,'marketing__',m||{});
+    addPrefixedFields(out,'buyer__',buyer||{});
+    objectiveRows.forEach((o,i)=>addPrefixedFields(out,`objective_${String(i+1).padStart(2,'0')}__`,o));
+    addPrefixedFields(out,'rfm__',r||{});
+    addPrefixedFields(out,'nps__',n||{});
+    addPrefixedFields(out,'abcd__',a||{});
+    addPrefixedFields(out,'spo__',sp||{});
+    if(c){addPrefixedFields(out,'commercial__',c,['demand_model']);addPrefixedFields(out,'demand__',c.demand_model||{});}
+    applicablePlans.forEach((p,i)=>{
+      const idx=String(i+1).padStart(2,'0');
+      const rawSupplier=suppliers.find(x=>x.supplier_id===p.supplier_id)||p;
+      addPrefixedFields(out,`supplier_${idx}__`,rawSupplier,['scopeOfferIds']);
+      addPrefixedFields(out,`plan_${idx}__`,p,['scopedRows','classBreak','missing','scopeOfferIds']);
+      out[`plan_${idx}__missing_evidence`]=(p.missing||[]).join(' | ');
+      ['A','B','C','D','UNKNOWN'].forEach(cls=>out[`plan_${idx}__abcd_demand_${cls}`]=p.classBreak?.[cls]??'');
+      const sla=slas.find(x=>x.supplier_id===p.supplier_id);
+      if(sla){out[`sla_${idx}__sla_id`]=sla.sla_id||'';out[`sla_${idx}__supplier_id`]=sla.supplier_id||'';out[`sla_${idx}__supplier_name`]=sla.supplier_name||'';out[`sla_${idx}__spo_priority_100`]=sla.spoPriority??'';out[`sla_${idx}__spo_customer_count`]=sla.spoCustomerCount??'';(sla.metrics||[]).forEach(metric=>{const mk=dataModelSlug(metric.metric);out[`sla_${idx}__${mk}__target`]=metric.target??'';out[`sla_${idx}__${mk}__unit`]=metric.unit||'';out[`sla_${idx}__${mk}__rule`]=metric.rule||'';out[`sla_${idx}__${mk}__evidence`]=metric.evidence||'';out[`sla_${idx}__${mk}__actual`]='';out[`sla_${idx}__${mk}__status`]='UNKNOWN'});}
+    });
+    const revenue=num(m?.order_total)??num(m?.product_subtotal);
+    const quantity=num(m?.quantity);
+    const productCost=num(m?.product_cost),packagingCost=num(m?.packaging_cost),deliveryCost=num(m?.delivery_cost_estimate),fulfilmentCost=num(m?.fulfilment_cost);
+    const variableTotal=allKnownSum([productCost,packagingCost,deliveryCost,fulfilmentCost]);
+    const contribution=(revenue!==null&&variableTotal!==null)?revenue-variableTotal:null;
+    const contributionPct=(contribution!==null&&revenue!==null&&revenue!==0)?contribution/revenue*100:null;
+    const forecast=num(c?.forecast_units),confirmed=num(c?.confirmed_units),confirmedOrders=num(c?.confirmed_orders),sourceCustomers=num(c?.source_customer_count);
+    const forecastError=(forecast!==null&&confirmed!==null)?confirmed-forecast:null;
+    const forecastAccuracy=(forecast!==null&&forecast>0&&confirmed!==null)?Math.max(0,100-(Math.abs(confirmed-forecast)/forecast*100)):null;
+    out.kpi_order_revenue_eur=revenue;
+    out.kpi_quantity_units=quantity;
+    out.kpi_total_variable_cost_eur=variableTotal;
+    out.kpi_contribution_eur=contribution;
+    out.kpi_contribution_margin_pct=contributionPct;
+    out.kpi_unit_revenue_eur=(revenue!==null&&quantity)?revenue/quantity:null;
+    out.kpi_unit_variable_cost_eur=(variableTotal!==null&&quantity)?variableTotal/quantity:null;
+    out.kpi_unit_contribution_eur=(contribution!==null&&quantity)?contribution/quantity:null;
+    out.kpi_forecast_units=forecast;
+    out.kpi_confirmed_units=confirmed;
+    out.kpi_forecast_error_units=forecastError;
+    out.kpi_forecast_accuracy_pct=forecastAccuracy;
+    out.kpi_actual_conversion_rate_pct=(confirmedOrders!==null&&sourceCustomers)?confirmedOrders/sourceCustomers*100:null;
+    out.kpi_demand_signal_units=c?.demand_model?.demand??null;
+    out.kpi_stock_turnover=c?.stock_turnover??null;
+    out.kpi_stock_efficiency_score_100=c?.stock_efficiency_score??null;
+    out.kpi_offer_margin_score_pct=c?.margin_score??null;
+    out.kpi_offer_rotation_score_100=c?.rotation_score??null;
+    out.kpi_product_value_score_100=c?.abcd_score??null;
+    out.kpi_abcd_priority_factor=c?.abcd_priority_factor_effective??a?.abcd_priority_factor??null;
+    out.kpi_customer_spo_priority_100=sp?.spo_working_normalized_100??null;
+    out.kpi_spo_weighted_units=(quantity!==null&&num(sp?.spo_working_normalized_100)!==null)?quantity*num(sp.spo_working_normalized_100)/100:null;
+    out.kpi_abcd_weighted_units=(quantity!==null&&num(a?.abcd_priority_factor)!==null)?quantity*num(a.abcd_priority_factor):null;
+    out.kpi_nps_score=num(n?.latest_nps_score);
+    out.kpi_rfm_cognitive_score=num(r?.cognitive_score);
+    out.kpi_repeat_purchase_rate_pct=num(a?.repeat_purchase_rate);
+    out.kpi_customer_product_margin_eur=num(a?.customer_product_margin);
+    out.kpi_customer_product_revenue_eur=num(a?.customer_product_revenue);
+    out.kpi_customer_product_margin_pct=num(a?.margin_pct);
+    out.kpi_applicable_supplier_count=applicablePlans.length;
+    out.kpi_any_po_conditional=applicablePlans.some(p=>!p.ready)?1:0;
+    out.kpi_max_applicable_lead_time_days=(()=>{const x=applicablePlans.map(p=>p.totalLead).filter(v=>v!==null);return x.length?Math.max(...x):null})();
+    out.kpi_applicable_purchase_value_eur=applicablePlans.length&&applicablePlans.every(p=>p.purchaseValue!==null)?applicablePlans.reduce((sum,p)=>sum+p.purchaseValue,0):null;
+    out.kpi_method_note='Helper KPI columns are calculated only where required evidence exists. Blank remains unknown; no missing value is converted to zero.';
+    return out;
+  });
+}
+function downloadDashboardCSV(){const rows=fullDataModelRows();if(!rows.length){alert('No model data available to export.');return}const headers=[];const seen=new Set();rows.forEach(r=>Object.keys(r).forEach(k=>{if(!seen.has(k)){seen.add(k);headers.push(k)}}));const isDE=marketingRows.length===266&&marketingRows.every(r=>text(r.customer_key).startsWith('DE-'));downloadFile(isDE?'DOC_ROI_Procurement_Compass_FULL_DATA_MODEL_DON_ESPADIN.csv':'DOC_ROI_Procurement_Compass_FULL_DATA_MODEL.csv',toCSV(rows,headers))}
 
 function printElement(id){const el=$(id);if(!el)return;let host=$('printHost');if(host)host.remove();host=document.createElement('div');host.id='printHost';const clone=el.cloneNode(true);clone.classList.add('print-target');host.appendChild(clone);document.body.appendChild(host);document.body.classList.add('print-focus');setTimeout(()=>window.print(),80);window.addEventListener('afterprint',()=>{document.body.classList.remove('print-focus');host.remove()},{once:true})}
 function printAllPOs(){printElement('poGrid')}
