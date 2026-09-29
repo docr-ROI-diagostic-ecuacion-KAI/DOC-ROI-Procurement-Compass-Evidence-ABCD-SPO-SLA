@@ -196,6 +196,66 @@ html{scroll-padding-top:96px;scroll-behavior:auto!important}
 @media(max-width:980px){.evidence-grid.v13{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.evidence-grid.v13{grid-template-columns:1fr}.evidence-card.v13-loader>p{min-height:0}.evidence-card.v13-loader .data-actions{grid-template-columns:1fr 1fr 1fr}}
 
+
+
+/* V15 · ABCD customer-classification workspace */
+.tab-frame .field input,.tab-frame .field select,.tab-frame .field textarea,
+.tab-frame table input,.tab-frame table select{font-size:14px;line-height:1.35}
+.tab-frame .field textarea{font-size:13px}
+.abcd-frame-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:16px}
+.abcd-frame-head h2{font-size:34px;line-height:1.08;letter-spacing:-.02em;margin:0 0 8px}
+.abcd-frame-head p{margin:0;color:var(--muted);max-width:760px;font-size:15px}
+.abcd-frame-actions{display:flex;gap:6px;flex-wrap:nowrap;justify-content:flex-end;align-items:center}.abcd-action-pair{display:flex;gap:6px;align-items:center;flex-wrap:nowrap}.abcd-action-btn{font-size:11px;line-height:1.15;padding:8px 10px;border-radius:7px;font-weight:750;box-shadow:none;min-height:34px;white-space:nowrap}.abcd-action-btn.download{background:#fff;color:#0b0f19;border:1px solid #cfd7de}.abcd-action-btn.spo{background:#0b0f19;color:#fff;border:1px solid #0b0f19}.abcd-action-btn:hover{transform:none;opacity:.88}.abcd-bottom-nav{display:flex;align-items:center;justify-content:space-between;gap:10px}.abcd-bottom-nav .btn-prev{font-size:11px;padding:8px 10px;min-height:34px}
+.abcd-logic-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:12px;margin:12px 0 16px}
+.abcd-logic-box{border:1px solid var(--line);border-radius:8px;background:#fff;padding:14px 15px}
+.abcd-logic-box h3{font-size:15px;margin:0 0 6px}.abcd-logic-box p{font-size:12px;line-height:1.5;color:var(--muted);margin:0}
+.abcd-auto-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-top:9px}
+.abcd-auto-list span{font-size:11px;padding:7px 8px;background:#f6f7f9;border:1px solid #e5ebef;border-radius:7px;color:#46586a}
+.abcd-weight-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:10px 0}
+.abcd-weight-grid .field{margin:0}.abcd-weight-grid .field label{font-size:10px;line-height:1.2}.abcd-weight-grid .field input{font-size:13px;padding:8px}
+.abcd-threshold-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:8px}.abcd-threshold-grid .field{margin:0}
+.abcd-config-wrap{border:1px solid var(--line);border-radius:8px;background:#fff;overflow:auto;margin-top:12px}
+.abcd-config-wrap table{min-width:900px}.abcd-config-wrap th{position:static}.abcd-config-wrap input{font-size:12px;padding:7px 8px;min-width:90px}.abcd-config-wrap td{font-size:12px}
+.abcd-validation{margin:12px 0;padding:11px 13px;border-left:4px solid var(--navy);background:#f6f8fa;border-radius:0 8px 8px 0;font-size:12px;line-height:1.5;color:#435564}
+.abcd-result-head{display:block;margin:20px 0 10px}.abcd-result-head>div{width:100%}.abcd-result-head h3{margin:0 0 4px;font-size:19px}.abcd-result-head p{margin:0;font-size:12px;color:var(--muted);max-width:none;width:100%}
+.abcd-customer-wrap{max-height:540px;overflow:auto;border:1px solid var(--line);border-radius:8px;background:#fff}.abcd-customer-wrap table{min-width:1400px}.abcd-customer-wrap th{top:0}.abcd-customer-wrap td{font-size:12px;vertical-align:top}
+.abcd-class-cell{font-weight:900;text-align:center;border-radius:0!important}.abcd-class-cell.A{background:rgba(23,114,69,.11);color:#12643c}.abcd-class-cell.B{background:rgba(10,111,174,.11);color:#075b91}.abcd-class-cell.C{background:rgba(201,154,74,.11);color:#8a5d0b}.abcd-class-cell.D{background:rgba(180,35,24,.11);color:#9b2018}.abcd-class-cell.UNKNOWN{background:rgba(86,98,115,.08);color:#566273}
+.abcd-chart{margin-top:14px;border:1px solid var(--line);border-radius:8px;background:#fff;padding:16px}
+.abcd-chart-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:12px}.abcd-chart-head h3{font-size:17px;margin:0 0 4px}.abcd-chart-head p{font-size:11px;color:var(--muted);margin:0}.abcd-chart-legend{display:flex;gap:8px;flex-wrap:wrap}.abcd-chart-legend span{font-size:10px;font-weight:800;display:inline-flex;align-items:center;gap:5px}.abcd-chart-legend i{width:9px;height:9px;border-radius:2px;display:inline-block}.abcd-bars{height:290px;display:flex;align-items:flex-end;gap:14px;padding:18px 12px 42px;border-left:1px solid #d9e2e8;border-bottom:1px solid #d9e2e8;position:relative}.abcd-bar-col{flex:1;min-width:90px;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;position:relative}.abcd-bar-stack{width:min(74px,72%);display:flex;flex-direction:column-reverse;justify-content:flex-start;border-radius:5px 5px 0 0;overflow:hidden;background:#f2f4f6}.abcd-bar-seg{width:100%;min-height:0}.abcd-bar-seg.A{background:rgba(23,114,69,.60)}.abcd-bar-seg.B{background:rgba(10,111,174,.58)}.abcd-bar-seg.C{background:rgba(201,154,74,.60)}.abcd-bar-seg.D{background:rgba(180,35,24,.55)}.abcd-bar-label{position:absolute;bottom:-34px;left:50%;transform:translateX(-50%);width:120px;text-align:center;font-size:10px;line-height:1.2;color:#526173}.abcd-bar-total{font-size:10px;font-weight:900;margin-bottom:4px;color:#334250}.abcd-y-note{font-size:10px;color:#7a8794;margin-top:7px}
+.abcd-summary-kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:12px 0}.abcd-summary-kpis .kpi{padding:12px}.abcd-summary-kpis .kpi .val{font-size:22px}
+@media(max-width:950px){.abcd-logic-grid{grid-template-columns:1fr}.abcd-weight-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.abcd-summary-kpis{grid-template-columns:repeat(3,minmax(0,1fr))}.abcd-frame-head{display:block}.abcd-frame-actions{justify-content:flex-start;margin-top:12px}}
+@media(max-width:620px){.abcd-weight-grid,.abcd-threshold-grid,.abcd-summary-kpis{grid-template-columns:1fr 1fr}.abcd-auto-list{grid-template-columns:1fr}.abcd-bars{overflow-x:auto;justify-content:flex-start}.abcd-bar-col{flex:0 0 100px}.abcd-frame-actions,.abcd-action-pair{flex-wrap:wrap}.abcd-bottom-nav{align-items:flex-start}.abcd-action-btn{font-size:10px;padding:7px 9px}}
+
+
+
+/* V17 · SPO-first customer intelligence view */
+
+/* V18 · SPO source gate and full CRM portfolio */
+.spo-source-gate{border:1px solid var(--line);border-radius:8px;background:#fbfcfd;padding:16px;margin:14px 0 16px}
+.spo-source-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:12px}.spo-source-head h3{font-size:18px;margin:2px 0 5px}.spo-source-head p{font-size:12px;line-height:1.5;color:var(--muted);margin:0;max-width:820px}
+.spo-source-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.spo-source-card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:13px;position:relative}.spo-source-card h4{font-size:15px;margin:2px 0 6px}.spo-source-card p{font-size:11.5px;line-height:1.45;color:var(--muted);margin:0 0 10px;min-height:50px}.spo-source-status{display:inline-flex;padding:4px 7px;border-radius:999px;background:#eef2f5;color:#566273;font-size:9px;font-weight:900;letter-spacing:.05em}.spo-source-status.ready{background:#eaf5ef;color:#177245}.spo-source-status.warn{background:#fff6e9;color:#a86400}.spo-source-actions{display:grid;grid-template-columns:1fr 1fr;gap:6px}.spo-source-actions .btn{font-size:10px;padding:7px 8px;min-height:34px;white-space:normal}.spo-source-note{margin-top:8px;font-size:10.5px;line-height:1.35;color:#607080;background:#f7f9fb;border:1px solid #e4e9ee;border-radius:7px;padding:7px 8px}
+.spo-source-validation{margin-top:10px;border-left:3px solid #9aa8b5;background:#fff;padding:9px 11px;font-size:11px;color:#526173}.spo-source-validation.ready{border-left-color:#177245}.spo-source-validation.warn{border-left-color:#a86400}.spo-calc-row{display:flex;align-items:center;gap:10px;margin-top:10px}.spo-calc-btn{background:#0b0f19;color:#fff;border:1px solid #0b0f19;font-size:11px;padding:9px 13px}.spo-calc-btn:disabled{opacity:.35;cursor:not-allowed;transform:none}.spo-calc-row span{font-size:10.5px;color:#607080}.spo-results-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin:4px 0 10px}.spo-results-head h3{font-size:18px;margin:2px 0 5px}.spo-results-head p{font-size:12px;color:var(--muted);line-height:1.5;margin:0;max-width:800px}
+.spo-customer-table{max-height:720px;overflow:auto}.spo-customer-table table{min-width:max-content}.spo-customer-table th{position:sticky;top:0;z-index:4;background:#f4f6f8}.spo-customer-table th:first-child,.spo-customer-table td:first-child{position:sticky;left:0;z-index:3}.spo-customer-table th:first-child{z-index:5}.spo-crm-segment-cell{min-width:150px;font-weight:900}.spo-crm-segment-cell small{display:block;font-weight:700;opacity:.8;margin-top:2px}.spo-crm-value{white-space:nowrap;max-width:260px;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:900px){.spo-source-grid{grid-template-columns:1fr}.spo-results-head{display:block}.spo-results-head .spo-top-actions{margin-top:10px}}
+
+.spo-model-intro{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;border:1px solid var(--line);border-left:4px solid #0b0f19;border-radius:0 8px 8px 0;background:#fff;padding:16px 18px;margin:4px 0 12px}.spo-model-intro h3{font-size:18px;margin:2px 0 6px}.spo-model-intro p{font-size:12.5px;line-height:1.55;color:#526173;margin:0;max-width:820px}.spo-top-actions{display:flex;gap:7px;flex-wrap:nowrap}.spo-top-actions .btn{font-size:11px;padding:8px 10px;white-space:nowrap;box-shadow:none}
+.spo-visuals{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0 4px}.spo-chart-card{border:1px solid var(--line);border-radius:8px;background:#fff;padding:14px 15px}.spo-chart-card h3{font-size:15px;margin:0 0 4px}.spo-chart-card p{font-size:11px;color:var(--muted);margin:0 0 12px}.spo-bars{height:220px;display:flex;align-items:flex-end;gap:14px;border-left:1px solid #d9e2e8;border-bottom:1px solid #d9e2e8;padding:12px 12px 34px}.spo-bar-col{flex:1;min-width:58px;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;position:relative}.spo-bar{width:min(64px,72%);border-radius:5px 5px 0 0;min-height:2px}.spo-bar-value{font-size:10px;font-weight:900;margin-bottom:4px}.spo-bar-label{position:absolute;bottom:-26px;font-size:9px;font-weight:800;color:#526173;white-space:nowrap}.spo-matrix{display:grid;grid-template-columns:84px repeat(4,1fr);gap:5px;align-items:stretch}.spo-matrix>div{min-height:32px;border:1px solid #e1e7ec;border-radius:6px;padding:6px 7px;font-size:10px;display:flex;align-items:center;justify-content:center;text-align:center}.spo-matrix .head{font-weight:900;background:#f6f7f9}.spo-matrix .rowhead{font-weight:900;justify-content:flex-start;background:#fbfcfd}.spo-matrix .cell b{font-size:13px}.spo-crm-note{font-size:10.5px;color:#697786;margin-top:8px}.spo-customer-table td:nth-child(2){min-width:180px}
+@media(max-width:900px){.spo-model-intro{display:block}.spo-top-actions{margin-top:12px}.spo-visuals{grid-template-columns:1fr}}
+
+/* V19 · SPO result focus: customer data + segment chart + CRM export */
+.spo-v19-chart{border:1px solid var(--line);border-radius:8px;background:#fff;padding:16px 18px;margin:14px 0}
+.spo-v19-chart-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:10px}
+.spo-v19-chart-head h3{font-size:16px;margin:0 0 4px}.spo-v19-chart-head p{font-size:11px;color:var(--muted);margin:0;max-width:760px}
+.spo-v19-bars{height:250px;display:flex;align-items:flex-end;gap:20px;border-left:1px solid #d9e2e8;border-bottom:1px solid #d9e2e8;padding:14px 18px 38px;margin-top:8px}
+.spo-v19-col{flex:1;min-width:76px;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;position:relative}
+.spo-v19-value{font-size:11px;font-weight:900;margin-bottom:5px;color:#0b0f19}
+.spo-v19-bar{width:min(74px,70%);border-radius:5px 5px 0 0;min-height:3px;border:1px solid rgba(11,15,25,.08)}
+.spo-v19-label{position:absolute;bottom:-30px;font-size:10px;font-weight:900;color:#435363;text-align:center;white-space:nowrap}
+.spo-v19-axis-note{font-size:10px;color:#6b7885;margin-top:8px}
+.spo-v19-driver-table{margin-top:12px;overflow:auto}.spo-v19-driver-table table{min-width:760px}.spo-v19-driver-table th,.spo-v19-driver-table td{font-size:10.5px;padding:8px 9px}
+.spo-v19-bottom-download{display:flex;justify-content:flex-end;gap:8px;padding:10px 12px;border-top:1px solid var(--line);background:#fbfcfd}
+.spo-v19-bottom-download .btn{font-size:10.5px;padding:7px 10px;min-height:32px}
+@media(max-width:700px){.spo-v19-bars{gap:9px;padding-left:10px;padding-right:10px}.spo-v19-col{min-width:54px}.spo-v19-label{font-size:9px}.spo-v19-chart-head{display:block}}
 </style>
 </head>
 <body>
@@ -291,55 +351,92 @@ html{scroll-padding-top:96px;scroll-behavior:auto!important}
 </div>
 
 <section class="section" id="sec2"><div class="section-shell">
-  <div class="section-h"><div><h2>01 · ABCD Product / Offer Intelligence</h2><p>ABCD is the product-intelligence lens of this Compass. When canonical DOC ROI ABCD fields are present in the loaded CSV, Compass uses that upstream classification. When they are not available, the pill runs a transparent procurement fallback simulation from rotation, contribution margin and stock efficiency so the purchasing exercise can continue without inventing evidence.</p></div><span class="tag">ABCD CORE</span></div>
-  <div class="grid4">
-    <div class="field"><label>Rotation weight (%)</label><input id="wRot" type="number" value="35" min="0" max="100" oninput="recalculate()"></div>
-    <div class="field"><label>Margin weight (%)</label><input id="wMargin" type="number" value="40" min="0" max="100" oninput="recalculate()"></div>
-    <div class="field"><label>Stock efficiency weight (%)</label><input id="wStock" type="number" value="25" min="0" max="100" oninput="recalculate()"></div>
-    <div class="field"><label>Target stock turnover / period</label><input id="targetTurnover" type="number" value="1.5" min="0.1" step="0.1" oninput="recalculate()"><small>Operational benchmark used only to score stock efficiency.</small></div>
+  <div class="abcd-frame-head">
+    <div><h2>01 · ABCD Product / Offer Intelligence</h2><p>Compass uses the evidence already loaded to do most of the ABCD work. Revenue, volume, current purchase, 4P offer, transaction frequency and repeat evidence are derived automatically. You only complete the economic or strategic evidence that does not exist upstream. NPS is shown beside the result for customer context, but it is not used to calculate ABCD.</p></div>
+    <div class="abcd-frame-actions no-print"><div class="abcd-action-pair"><button class="btn abcd-action-btn download" onclick="downloadABCDSPOReady()">Download ABCD Customer CSV</button></div></div>
   </div>
-  <div class="grid3">
+
+  <div class="abcd-logic-grid">
+    <div class="abcd-logic-box"><h3>What Compass derives automatically</h3><p>The user should not re-enter evidence that already exists in Marketing → Purchase or RFM.</p><div class="abcd-auto-list"><span>Customer / source ID</span><span>Product + commercial offer / 4P</span><span>Revenue + units</span><span>Purchase frequency + repeat evidence</span><span>Rotation / usage</span><span>RFM context</span><span>NPS context</span><span>ABCD factor A=4 · B=3 · C=2 · D=1</span></div></div>
+    <div class="abcd-logic-box"><h3>What may still need configuration</h3><p><b>Variable cost per unit</b> when the commercial file does not contain usable cost evidence, plus <b>cross-sell potential</b>, <b>upsell potential</b> and <b>strategic relevance</b>. Missing evidence remains UNKNOWN and blocks a definitive ABCD class. The Example supplies explicit classroom assumptions for these fields.</p></div>
+  </div>
+
+  <div class="card" style="box-shadow:none;margin-bottom:14px"><div class="subhead">ABCD scoring model</div><div class="abcd-weight-grid">
+    <div class="field"><label>Revenue contribution %</label><input id="wRevenue" type="number" value="15" min="0" max="100" oninput="recalculate()"></div>
+    <div class="field"><label>Gross margin contribution %</label><input id="wGrossMargin" type="number" value="20" min="0" max="100" oninput="recalculate()"></div>
+    <div class="field"><label>Margin % weight</label><input id="wMarginPct" type="number" value="15" min="0" max="100" oninput="recalculate()"></div>
+    <div class="field"><label>Volume weight</label><input id="wVolume" type="number" value="10" min="0" max="100" oninput="recalculate()"></div>
+    <div class="field"><label>Repeat purchase weight</label><input id="wRepeat" type="number" value="10" min="0" max="100" oninput="recalculate()"></div>
+    <div class="field"><label>Rotation / usage weight</label><input id="wRotation" type="number" value="10" min="0" max="100" oninput="recalculate()"></div>
+    <div class="field"><label>Cross-sell weight</label><input id="wCross" type="number" value="5" min="0" max="100" oninput="recalculate()"></div>
+    <div class="field"><label>Upsell weight</label><input id="wUpsell" type="number" value="5" min="0" max="100" oninput="recalculate()"></div>
+    <div class="field"><label>Strategic relevance weight</label><input id="wStrategic" type="number" value="10" min="0" max="100" oninput="recalculate()"></div>
+  </div><div class="abcd-threshold-grid">
     <div class="field"><label>A threshold</label><input id="thrA" type="number" value="80" min="0" max="100" oninput="recalculate()"></div>
     <div class="field"><label>B threshold</label><input id="thrB" type="number" value="60" min="0" max="100" oninput="recalculate()"></div>
     <div class="field"><label>C threshold</label><input id="thrC" type="number" value="40" min="0" max="100" oninput="recalculate()"></div>
-  </div>
-  <div id="abcdAlert" class="alert">Weights must total 100%.</div>
-  <div class="formula" style="margin:14px 0">ABCD source: Compass calculates the operational product-intelligence view from the active commercial/product evidence.<br><br>Fallback only:<br>Rotation score = Units sold / Highest units sold in portfolio × 100<br>Margin score = (Net revenue − Variable cost) / Net revenue × 100<br>Stock efficiency score = min(100, Actual stock turnover / Target turnover × 100)<br>Fallback ABCD score = Rotation × weight + Margin × weight + Stock efficiency × weight</div>
-  <div class="note" style="margin-bottom:14px"><b>Methodological boundary.</b> This ABCD layer is an operational Procurement implementation inside Compass. It does not redefine SPO or the formal KAI·ROI v1 architecture. Unknown economics remain UNKNOWN.</div>
-  <div id="abcdOutput" class="empty-state"><b>ABCD is waiting for data</b>Load commercial evidence to calculate the portfolio classification.</div>
-  <div class="toolbar no-print" style="margin-top:14px"><button class="btn btn-secondary" onclick="downloadABCDCSV()">Download Compass ABCD View CSV</button></div>
+    <div class="field"><label>Weight total</label><input id="abcdWeightTotal" value="100" readonly></div>
+  </div></div>
 
-  <div style="height:1px;background:#e7edf2;margin:30px 0"></div>
-  <div class="section-h" style="margin-bottom:14px"><div><h2 style="font-size:25px">Customer Intelligence Integration · RFM + NPS + ABCD</h2><p>RFM and NPS are loaded in the Evidence step. Compass calculates the customer-level ABCD layer from the active commercial/product history and then validates the common <code>customer_key</code> before building the Procurement SPO working list.</p></div><span class="tag">CUSTOMER LEVEL</span></div>
-  <div class="grid3">
-    <div class="card"><div class="subhead">Dynamic RFM</div><h3>Behaviour intelligence</h3><p id="rfmInlineState">Loaded upstream in Evidence & Context.</p></div>
-    <div class="card"><div class="subhead">NPS</div><h3>Relationship intelligence</h3><p id="npsInlineState">Loaded upstream in Evidence & Context.</p></div>
-    <div class="card"><div class="subhead">ABCD Product Intelligence</div><h3>Calculated inside Compass</h3><p>ABCD is refreshed from the active commercial/product evidence. Missing economics remain UNKNOWN instead of being forced to zero.</p><div class="data-actions no-print"><button class="btn btn-primary" onclick="generateABCDFromLoadedEvidence()">Generate / refresh ABCD</button></div><div class="file-state" id="abcdCustomerFileState">ABCD not generated yet.</div></div>
-  </div>
-  <div class="note" style="margin:16px 0"><b>Operational SPO working layer.</b> For Procurement only, Compass calculates <code>RFM operational factor × ABCD priority factor × NPS priority factor</code> and normalises the result to 0–100 for service-priority management. This is an implementation layer. It does <b>not</b> replace or redefine the formal KAI·ROI relationship <code>SPO_i = CC_i · ABCD_i · NPS_i</code>. RFM is used here as the operational source for customer-behaviour intelligence.</div>
-  <div id="integrationValidation" class="empty-state"><b>Customer integration not loaded</b>Load RFM and NPS, then generate ABCD from the loaded history — or use Example.</div>
-  <div id="spoPreview" class="empty-state" style="margin-top:16px"><b>SPO working list not available</b>RFM + NPS + generated ABCD customer intelligence are required.</div>
-  <div class="toolbar no-print" style="margin-top:14px"><button class="btn btn-secondary" onclick="downloadABCDSPOReady()">Download SPO-Ready ABCD CSV</button><button class="btn btn-primary" onclick="downloadSPOWorking()">Download Procurement SPO Working CSV</button><button class="btn btn-primary" onclick="downloadSPOCustomerPortfolio()">Download Full Customer SPO Portfolio CSV</button></div>
-<div class="tab-nav-row no-print"><button class="btn btn-secondary" onclick="activateTab('sec0')">← Previous</button><button class="btn btn-primary" onclick="activateTab('sec3')">Next →</button></div></div></section>
+  <div class="subhead">Complete only the evidence that is not already upstream</div>
+  <div class="abcd-config-wrap"><table><thead><tr><th>Product / offer</th><th>4P</th><th>Variable cost / unit €</th><th>Cross-sell potential %</th><th>Upsell potential %</th><th>Strategic relevance /100</th><th>Evidence status</th></tr></thead><tbody id="abcdOfferConfigBody"><tr><td colspan="7" class="muted">Load Marketing → Purchase evidence to create the configuration rows.</td></tr></tbody></table></div>
+  <div id="abcdValidation" class="abcd-validation"><b>ABCD waiting for evidence.</b> Load the upstream files or use Example.</div>
+  <div class="note" style="margin-bottom:14px"><b>Methodological boundary.</b> ABCD is the product / service economic-intelligence layer. RFM and NPS remain separate customer-intelligence layers. RFM transaction frequency may be reused as source evidence for purchase frequency / repeat behaviour, but RFM score and NPS do not enter the ABCD score. Unknown is never converted to zero.</div>
+
+  <div class="abcd-result-head"><div><h3>Customer-level ABCD classification</h3><p>One row per customer. The purchase keeps its RFM and NPS context, while the ABCD column states what that product / offer consumption represents economically and strategically.</p></div></div>
+  <div id="abcdSummaryKpis" class="abcd-summary-kpis"></div>
+  <div id="abcdCustomerOutput" class="empty-state"><b>ABCD classification not available</b>Load evidence and complete the missing ABCD configuration.</div>
+  <div id="abcdDistributionChart" class="abcd-chart hidden"></div>
+
+  <div class="tab-nav-row no-print abcd-bottom-nav"><button class="btn btn-secondary btn-prev" onclick="activateTab('sec0')">← Previous</button><div class="abcd-action-pair"><button class="btn abcd-action-btn download" onclick="downloadABCDSPOReady()">Download ABCD Customer CSV</button><button class="btn btn-secondary" onclick="activateTab('sec3')">Next · Build SPO →</button></div></div>
+</div></section>
 
 <section class="section" id="sec3"><div class="section-shell">
-  <div class="section-h"><div><h2>02 · SPO-Informed ABCD Demand Planning</h2><p>Commercial quantity still comes from Marketing, Pre-Sales, Sales and Post-Sales. Customer-level SPO intelligence does not mechanically increase budget or units; it prioritises the service sensitivity of the demand, the sequencing of the purchase plan and the strictness of supplier SLA targets.</p></div><span class="tag">DEMAND</span></div>
-  <div class="kpis" id="classDemandKpis"></div><div class="kpis" id="spoDemandKpis" style="margin-top:10px"></div><div id="spoDemandOutput" class="empty-state" style="margin-top:16px"><b>SPO demand view not available</b>Load the customer intelligence files to connect customer priority with product demand.</div>
-  <div class="spo-download-emphasis"><b>Customer-level SPO evidence is a mandatory output.</b><p>Every matched customer remains downloadable with the RFM, NPS and ABCD evidence that explains the Procurement SPO working result, the service segment used by this pill and the service targets derived from that priority. The CSV preserves the segment colour as a hexadecimal field; the PDF prints the same colour visually.</p></div>
-  <div class="spo-portfolio" id="spoCustomerPortfolioWrap">
-    <div class="spo-portfolio-head"><div><h3>All Customer SPO Portfolio</h3><p>One row per <code>customer_key</code>. Inspect the complete lineage from behaviour (RFM), relationship (NPS), product intelligence (ABCD) and the resulting Procurement SPO working service segment.</p></div><div class="toolbar no-print"><button class="btn btn-primary" onclick="downloadSPOCustomerPortfolio()">Download All Customers CSV</button><button class="btn btn-secondary" onclick="printSPOCustomerPortfolio()">Print / Save All Customers PDF</button></div></div>
-    <div class="spo-legend" id="spoSegmentLegend"></div>
-    <div class="spo-filter-bar no-print">
-      <div class="field"><label>Search customer / product / factor</label><input id="spoCustomerSearch" placeholder="e.g., DE-0043, Premium Pack, Process" oninput="renderSPOCustomerPortfolio()"></div>
-      <div class="field"><label>SPO service segment</label><select id="spoSegmentFilter" onchange="renderSPOCustomerPortfolio()"><option value="ALL">All segments</option><option>SPO-1</option><option>SPO-2</option><option>SPO-3</option><option>SPO-4</option></select></div>
-      <div class="field"><label>ABCD class</label><select id="spoABCDFilter" onchange="renderSPOCustomerPortfolio()"><option value="ALL">All ABCD</option><option>A</option><option>B</option><option>C</option><option>D</option></select></div>
-      <button class="btn btn-secondary" onclick="clearSPOFilters()">Clear filters</button>
-    </div>
-    <div id="spoCustomerPortfolio" class="empty-state"><b>Customer portfolio not available</b>Load RFM + NPS + ABCD or use Example.</div>
+  <div class="section-h"><div><h2>02 · SPO Customer Intelligence & Demand Planning</h2><p>This is the SPO build point. Before any priority is calculated, Compass checks the three customer-level sources required by the operating model: RFM, NPS and the ABCD customer intelligence created in the previous step. Only when the customer keys match and all three layers are usable does the SPO calculation become available.</p></div><span class="tag">SPO + DEMAND</span></div>
+
+  <div class="spo-model-intro">
+    <div><div class="subhead">SPO model</div><h3>One customer. One traceable priority record.</h3><p>The formal structure remains <b>SPO<sub>i</sub> = CC<sub>i</sub> · ABCD<sub>i</sub> · NPS<sub>i</sub></b>. In this Procurement implementation, the available RFM-derived customer factor feeds the operational CC layer, ABCD contributes product/service relevance and NPS contributes relationship evidence. The result is a working priority used to protect demand and define supplier service requirements. This operational layer does not redefine the formal KAI·ROI architecture.</p></div>
   </div>
+
+  <div class="spo-source-gate no-print" id="spoSourceGate">
+    <div class="spo-source-head"><div><div class="subhead">SPO source validation</div><h3>Confirm the three customer intelligence layers</h3><p>If a source was already loaded upstream, Compass shows it as ready. Otherwise, load it here. ABCD may be imported as a CSV or consumed directly from the classification created in Step 01.</p></div><span class="gate-status open" id="spoGateBadge">PENDING</span></div>
+    <div class="spo-source-grid">
+      <div class="spo-source-card"><div class="spo-source-status" id="spoRfmBadge">PENDING</div><h4>Dynamic RFM</h4><p>Behavioural/customer evidence using the same stable <code>customer_key</code>.</p><div class="spo-source-actions"><button class="btn btn-secondary" onclick="document.getElementById('rfmCsvInput').click()">Import RFM CSV</button><a class="btn btn-secondary" href="https://rfm-dinamico-git-main-doc-roi-s-projects.vercel.app/" target="_blank" rel="noreferrer">Get RFM ↗</a></div><div class="spo-source-note" id="spoRfmState">RFM pending.</div></div>
+      <div class="spo-source-card"><div class="spo-source-status" id="spoNpsBadge">PENDING</div><h4>NPS</h4><p>Relationship/satisfaction evidence consolidated to one current customer record.</p><div class="spo-source-actions"><button class="btn btn-secondary" onclick="document.getElementById('npsCsvInput').click()">Import NPS CSV</button><a class="btn btn-secondary" href="https://activacion-nps.vercel.app/" target="_blank" rel="noreferrer">Get NPS ↗</a></div><div class="spo-source-note" id="spoNpsState">NPS pending.</div></div>
+      <div class="spo-source-card"><div class="spo-source-status" id="spoAbcdBadge">PENDING</div><h4>ABCD Product Intelligence</h4><p>Use the customer-level ABCD created in Step 01 or import a compatible ABCD customer CSV.</p><div class="spo-source-actions"><button class="btn btn-secondary" onclick="document.getElementById('spoAbcdCsvInput').click()">Import ABCD CSV</button><button class="btn btn-secondary" onclick="useCurrentABCDForSPO()">Use current ABCD</button></div><input id="spoAbcdCsvInput" type="file" accept=".csv,text/csv" class="hidden" onchange="importSPOABCDCSV(event)"><div class="spo-source-note" id="spoAbcdState">ABCD pending.</div></div>
+    </div>
+    <div class="spo-source-validation" id="spoSourceValidation">Waiting for RFM, NPS and ABCD.</div>
+    <div class="spo-calc-row"><button class="btn spo-calc-btn" id="spoCalculateBtn" disabled onclick="calculateSPOFromGate()">Calculate SPO</button><span id="spoCalculateHint">Load and align the three sources to enable the calculation.</span></div>
+  </div>
+
+  <div id="spoResultsWrap" class="hidden">
+    <div class="spo-results-head"><div><div class="subhead">SPO result</div><h3>Customer priority is now calculated and ready for Procurement.</h3><p>The portfolio is sorted from the highest SPO priority to the lowest. The first column preserves the service segment colour, while the CRM output keeps the complete lineage from every loaded customer source.</p></div><div class="spo-top-actions no-print"><button class="btn btn-primary" onclick="downloadSPOCRM()">Download SPO.CRM CSV</button><button class="btn btn-secondary" onclick="printSPOCustomerPortfolio()">Print / Save SPO PDF</button></div></div>
+
+    <div class="kpis" id="spoDemandKpis" style="margin-top:14px"></div>
+    <div id="spoVisuals" class="spo-visuals"></div>
+
+    <div class="spo-download-emphasis"><b>SPO.CRM is the customer master output of this step.</b><p>One row per customer, ordered by SPO priority and preserving the full matched lineage from Marketing, RFM, NPS, ABCD and the resulting SPO working layer. The segment colour is exported as HEX so the same service-priority logic can be reused downstream.</p></div>
+
+    <div class="spo-portfolio" id="spoCustomerPortfolioWrap">
+      <div class="spo-portfolio-head"><div><h3>All Customer SPO.CRM Portfolio</h3><p>All matched customer variables are available in this view and in the CSV. Scroll vertically through the complete customer population and horizontally through the full lineage.</p></div><div class="toolbar no-print"><button class="btn btn-primary" onclick="downloadSPOCRM()">Download SPO.CRM CSV</button><button class="btn btn-secondary" onclick="printSPOCustomerPortfolio()">Print / Save All Customers PDF</button></div></div>
+      <div class="spo-legend" id="spoSegmentLegend"></div>
+      <div class="spo-filter-bar no-print">
+        <div class="field"><label>Search customer / product / factor</label><input id="spoCustomerSearch" placeholder="e.g., customer ID, product, factor" oninput="renderSPOCustomerPortfolio()"></div>
+        <div class="field"><label>SPO service segment</label><select id="spoSegmentFilter" onchange="renderSPOCustomerPortfolio()"><option value="ALL">All segments</option><option>SPO-1</option><option>SPO-2</option><option>SPO-3</option><option>SPO-4</option></select></div>
+        <div class="field"><label>ABCD class</label><select id="spoABCDFilter" onchange="renderSPOCustomerPortfolio()"><option value="ALL">All ABCD</option><option>A</option><option>B</option><option>C</option><option>D</option></select></div>
+        <button class="btn btn-secondary" onclick="clearSPOFilters()">Clear filters</button>
+      </div>
+      <div id="spoCustomerPortfolio" class="empty-state"><b>Customer portfolio not available</b>Calculate SPO after validating the three source files.</div>
+    </div>
+
+    <div class="subhead" style="margin-top:18px">Demand consequence</div>
+  <div class="kpis" id="classDemandKpis"></div>
+  <div id="spoDemandOutput" class="empty-state" style="margin-top:16px"><b>SPO demand view not available</b>Calculate SPO to connect customer priority with product demand.</div>
   <div id="demandOutput" class="empty-state" style="margin-top:16px"><b>No demand signal yet</b>Commercial evidence is required before the portfolio can be simulated.</div>
-  <div class="note" style="margin-top:14px"><b>Demand integrity rule.</b> The model compares Marketing weighted forecast with the known funnel signal, adds repeat/RFM units only when evidence exists, and flags partial evidence instead of treating missing data as zero. SPO changes <b>priority and service protection</b>, not the commercial forecast itself.</div>
-<div class="tab-nav-row no-print"><button class="btn btn-secondary" onclick="activateTab('sec2')">← Previous</button><button class="btn btn-primary" onclick="activateTab('sec4')">Next →</button></div></div></section>
+  <div class="note" style="margin-top:14px"><b>Demand integrity rule.</b> Commercial quantity remains demand-led. SPO changes <b>priority and service protection</b>, not budget or units mechanically. Unknown evidence remains UNKNOWN and is never converted into zero.</div>
+  </div>
+  <div class="tab-nav-row no-print"><button class="btn btn-secondary" onclick="activateTab('sec2')">← Previous</button><button class="btn btn-primary" onclick="goToPurchaseAfterSPO()">Next →</button></div>
+</div></section>
 
 <section class="section" id="sec4"><div class="section-shell">
   <div class="section-h"><div><h2>03 · Purchase Planning by Supplier</h2><p>Map the ABCD demand portfolio to the suppliers, components and services required to deliver it. Supplier plans are ordered by SPO-informed service priority before execution urgency, while quantities remain driven by demand, stock, MOQ and lead time. Example auto-loads a complete supplier configuration; real files may leave these columns blank and Procurement completes them here.</p></div><span class="tag">PROCUREMENT</span></div>
@@ -557,6 +654,7 @@ function renderSessionMode(){const title=$('sessionModeTitle'),copy=$('sessionMo
 function renderEvidenceSnapshot(){const host=$('exampleEvidenceSummary'),tag=$('snapshotTag');if(!host)return;const unique=new Set(marketingRows.map(r=>text(r.customer_key).trim()).filter(Boolean)).size;if(!marketingRows.length){host.className='empty-state';host.innerHTML='<b>No evidence loaded</b>Use Example or import your own upstream CSV files.';if(tag)tag.textContent='EMPTY';return}buildSPOWorking();const converted=marketingRows.filter(r=>text(r.handoff_status).trim().toLowerCase()==='converted');const totalUnits=converted.map(r=>num(r.quantity)).filter(v=>v!==null).reduce((a,b)=>a+b,0);const totalValue=converted.map(r=>num(r.order_total)).filter(v=>v!==null).reduce((a,b)=>a+b,0);const fourP={};marketingRows.forEach(r=>{const p=text(r.active_benefit_type||r.entry_4p||'UNKNOWN').trim()||'UNKNOWN';fourP[p]=(fourP[p]||0)+1});const rKeys=new Set(rfmRows.map(r=>text(r.customer_key).trim()).filter(Boolean)),nKeys=new Set(npsRows.map(r=>text(r.customer_key).trim()).filter(Boolean)),aKeys=new Set(abcdCustomerRows.map(r=>text(r.customer_key).trim()).filter(Boolean));const matched=[...new Set(marketingRows.map(r=>text(r.customer_key).trim()).filter(Boolean))].filter(k=>rKeys.has(k)&&nKeys.has(k)&&aKeys.has(k)).length;const rMap=new Map(rfmRows.map(r=>[text(r.customer_key).trim(),r])),nMap=new Map(npsRows.map(r=>[text(r.customer_key).trim(),r])),aMap=new Map(abcdCustomerRows.map(r=>[text(r.customer_key).trim(),r])),sMap=new Map(spoRows.map(r=>[text(r.customer_key).trim(),r]));const preview=marketingRows.slice(0,10).map(m=>{const k=text(m.customer_key).trim(),r=rMap.get(k)||{},n=nMap.get(k)||{},a=aMap.get(k)||{},w=sMap.get(k)||{};return `<tr><td><b>${esc(k)}</b></td><td>${esc(m.active_benefit_type||m.entry_4p||'—')}</td><td class="num">${fmt(num(m.quantity),0)}</td><td class="num">${money(num(m.order_total))}</td><td>${esc(r.cognitive_segment||r.rfm_segment||'—')}</td><td>${esc(n.latest_nps_type||'—')} · ${esc(n.latest_nps_score||'—')}</td><td>${esc(a.primary_product_name||'—')} · ${esc(a.primary_product_class||a.best_product_class||'—')}</td><td class="num">${fmt(num(w.spo_working_normalized_100))}</td></tr>`}).join('');host.className='';host.innerHTML=`<div class="evidence-summary-grid"><div class="evidence-summary-item"><div class="l">Customer keys</div><div class="v">${unique}</div><div class="s">unique customers</div></div><div class="evidence-summary-item"><div class="l">Converted handoffs</div><div class="v">${converted.length}</div><div class="s">customer/order evidence rows</div></div><div class="evidence-summary-item"><div class="l">Observed units</div><div class="v">${fmt(totalUnits,0)}</div><div class="s">purchase quantity</div></div><div class="evidence-summary-item"><div class="l">Observed order total</div><div class="v">${money(totalValue)}</div><div class="s">commercial handoff value</div></div><div class="evidence-summary-item"><div class="l">RFM rows</div><div class="v">${rfmRows.length}</div><div class="s">behavioural intelligence</div></div><div class="evidence-summary-item"><div class="l">NPS rows</div><div class="v">${npsRows.length}</div><div class="s">relationship intelligence</div></div><div class="evidence-summary-item"><div class="l">ABCD rows</div><div class="v">${abcdCustomerRows.length}</div><div class="s">product intelligence</div></div><div class="evidence-summary-item"><div class="l">4-way match</div><div class="v">${matched}</div><div class="s">Marketing + RFM + NPS + ABCD</div></div></div><div class="note"><b>4P evidence mix.</b> ${Object.entries(fourP).map(([k,v])=>`${esc(k)} ${v}`).join(' · ')}. This is observed handoff evidence; it is not an allocation rule.</div><div class="evidence-preview"><table><thead><tr><th>Customer</th><th>4P</th><th class="num">Qty</th><th class="num">Order total</th><th>RFM</th><th>NPS</th><th>Primary product / ABCD</th><th class="num">Working priority</th></tr></thead><tbody>${preview}</tbody></table></div><div class="muted" style="font-size:11px;margin-top:8px">Preview shows 10 rows. The loaded state contains ${unique} unique customers.</div>`;if(tag)tag.textContent=unique===266?'266 CUSTOMERS':'LOADED'}
 
 function loadExample(){
+  abcdSourceMode='current';spoActivated=false;
   resetSession(false);
   marketingRows=MARKETING_EXAMPLE_ROWS.map(r=>({...r}));
   objectiveRows=OBJECTIVES_EXAMPLE_ROWS.map(r=>({...r}));
@@ -630,7 +728,7 @@ function spoSegmentMeta(score){
 }
 function marketingEvidenceForCustomer(key){return marketingRows.find(r=>text(r.customer_key).trim()===text(key).trim())||null}
 function spoEvidenceExplanation(r,n,a,raw,norm,seg){
-  const rfm=`RFM ${text(r.cognitive_category||'UNKNOWN')} / score ${text(r.cognitive_score||'UNKNOWN')} / ${text(r.segment_p2||r.segment_p1||'UNKNOWN')} / ${text(r.cognitive_movement||'UNKNOWN')}`;
+  const rfm=`CC/RFM ${text(r.cognitive_category||'UNKNOWN')} / operational factor ${text(r.cognitive_score||'UNKNOWN')} / ${text(r.segment_p2||r.segment_p1||'UNKNOWN')} / ${text(r.cognitive_movement||'UNKNOWN')}`;
   const nps=`NPS ${text(n.latest_nps_score||'UNKNOWN')} / ${text(n.latest_nps_type||'UNKNOWN')} / factor ${text(n.nps_priority_factor||'UNKNOWN')} / ${text(n.main_factor||'UNKNOWN')}`;
   const abcd=`ABCD ${text(a.primary_product_class||a.best_product_class||'UNKNOWN')} / value ${text(a.product_value_score||'UNKNOWN')} / factor ${text(a.abcd_priority_factor||'UNKNOWN')} / ${text(a.primary_product_name||'UNKNOWN')}`;
   return `${rfm} | ${nps} | ${abcd} | Working index ${raw===null?'UNKNOWN':Number(raw).toFixed(2)} → ${norm===null?'UNKNOWN':Number(norm).toFixed(2)}/100 → ${seg.code} ${seg.label}`;
@@ -673,7 +771,7 @@ function buildSPOWorking(){
       abcd_margin_pct:num(a.margin_pct),abcd_strategic_relevance_score:num(a.strategic_relevance_score),abcd_cross_sell_potential:num(a.cross_sell_potential),abcd_upsell_potential:num(a.upsell_potential),abcd_evidence_status:a.evidence_status||'',
       marketing_utm_source:m?m.utm_source||'':'',marketing_utm_medium:m?m.utm_medium||'':'',marketing_utm_campaign:m?m.utm_campaign||'':'',marketing_entry_4p:m?m.entry_4p||'':'',marketing_active_benefit_type:m?m.active_benefit_type||'':'',marketing_active_benefit_label:m?m.active_benefit_label||'':'',marketing_quantity:m?num(m.quantity):null,marketing_order_total:m?num(m.order_total):null,marketing_handoff_status:m?m.handoff_status||'':'',
       spo_evidence_explanation:lineage,
-      method_note:'Operational procurement SPO working index = RFM cognitive_score × ABCD priority factor × NPS priority factor. Implementation layer only; it does not redefine formal SPO.'};
+      method_note:'Operational Procurement implementation of formal SPO_i = CC_i × ABCD_i × NPS_i. The available RFM-derived operational factor feeds the CC implementation layer; ABCD and NPS factors remain separate inputs. This working score does not redefine the formal variables.'};
   });
   const allMatch=rs.unique===ns.unique&&ns.unique===as.unique&&common.length===rs.unique&&rs.missing===0&&ns.missing===0&&as.missing===0&&rs.duplicates===0&&ns.duplicates===0&&as.duplicates===0;
   renderIntegrationValidation({rs,ns,as,matched:common.length,allMatch,temporalReview:spoRows.filter(r=>r.temporal_alignment_status==='REVIEW').length});
@@ -688,17 +786,78 @@ function renderIntegrationValidation(v){
 }
 function segmentPillHTML(row){const seg=spoSegmentMeta(row.spo_working_normalized_100);return `<span class="spo-segment-pill spo-seg-${seg.rank}" title="${esc(seg.label)}"><i></i>${esc(seg.code)} · ${esc(seg.label)}</span>`}
 function renderSPOPreview(){const host=$('spoPreview');if(!host)return;if(!spoRows.length){host.className='empty-state';host.innerHTML='<b>SPO working list not available</b>All three customer intelligence files are required.';return}const avg=spoRows.map(r=>r.spo_working_normalized_100).filter(v=>v!==null);const cls={A:0,B:0,C:0,D:0};const segs={'SPO-1':0,'SPO-2':0,'SPO-3':0,'SPO-4':0};spoRows.forEach(r=>{if(validClass(r.abcd_class))cls[r.abcd_class]++;if(segs[r.spo_service_segment]!==undefined)segs[r.spo_service_segment]++});const sorted=[...spoRows].sort((a,b)=>(b.spo_working_normalized_100??-1)-(a.spo_working_normalized_100??-1)).slice(0,12);host.className='';host.innerHTML=`<div class="kpis"><div class="kpi good"><div class="lbl">Matched customers</div><div class="val">${spoRows.length}</div><div class="sub">one SPO working row per customer</div></div><div class="kpi"><div class="lbl">Average SPO priority</div><div class="val">${avg.length?fmt(avg.reduce((a,b)=>a+b,0)/avg.length):'—'}</div><div class="sub">0–100 procurement working scale</div></div><div class="kpi"><div class="lbl">SPO-1 / SPO-2</div><div class="val">${segs['SPO-1']+segs['SPO-2']}</div><div class="sub">higher service protection</div></div><div class="kpi warn"><div class="lbl">Temporal review</div><div class="val">${spoRows.filter(r=>r.temporal_alignment_status==='REVIEW').length}</div><div class="sub">periods preserved, not overwritten</div></div></div><div class="table-wrap" style="margin-top:14px"><table><thead><tr><th>Customer</th><th>SPO segment</th><th>RFM</th><th>NPS</th><th>Primary product</th><th>ABCD</th><th class="num">SPO working</th><th>4P demand lens</th><th>Temporal</th></tr></thead><tbody>${sorted.map(r=>`<tr><td><b>${esc(r.customer_key)}</b></td><td>${segmentPillHTML(r)}</td><td>${esc(r.rfm_segment)} · ${fmt(r.rfm_operational_factor)}</td><td>${esc(r.nps_type)} · ${fmt(r.nps_operational_factor)}</td><td>${esc(r.primary_product_name)}</td><td><span class="abcd-badge ${esc(r.abcd_class)}">${esc(r.abcd_class)}</span></td><td class="num"><b>${fmt(r.spo_working_normalized_100)}</b></td><td>${esc(r.four_p_preference_operational)}</td><td>${esc(r.temporal_alignment_status)}</td></tr>`).join('')}</tbody></table></div><p class="muted" style="font-size:12px">Showing the 12 highest Procurement SPO working priorities. The full 266-customer portfolio is available in the Demand tab and as CSV/PDF.</p>`}
-function downloadABCDSPOReady(){if(!abcdCustomerRows.length){alert('Load customer-level ABCD data first.');return}const headers=Object.keys(abcdCustomerRows[0]);const isDE=abcdCustomerRows.length===266&&abcdCustomerRows.every(r=>String(r.customer_key||'').startsWith('DE-'));downloadFile(isDE?'DOC_ROI_ABCD_SPO_READY_DON_ESPADIN.csv':'DOC_ROI_ABCD_SPO_READY.csv',toCSV(abcdCustomerRows,headers))}
+function abcdOperationsExportRows(){
+  if(!abcdCustomerRows.length)return [];
+  // Build the SPO working layer for export when RFM + NPS + ABCD are available, without forcing navigation.
+  if(rfmRows.length&&npsRows.length&&abcdCustomerRows.length)buildSPOWorkingV14();
+  const sMap=new Map(spoRows.map(r=>[text(r.customer_key).trim(),r]));
+  return abcdCustomerRows.map(a=>{const s=sMap.get(text(a.customer_key).trim())||{};return {
+    customer_key:a.customer_key,source_customer_id:a.source_customer_id||a.customer_key,order_id:a.order_id||'',product_id:a.primary_product_id||'',product_name:a.primary_product_name||'',commercial_offer:a.commercial_offer||'',four_p_tag:a.four_p_tag||'',
+    rfm_segment:a.rfm_segment||s.rfm_segment||'',rfm_operational_factor:s.rfm_operational_factor??'',rfm_transaction_frequency:a.rfm_transaction_frequency||'',rfm_transaction_monetary:a.rfm_transaction_monetary||'',
+    nps_score:a.nps_score??s.nps_score??'',nps_type:a.nps_type||s.nps_type||'',nps_operational_factor:s.nps_operational_factor??'',
+    abcd_class:a.primary_product_class||'',product_value_score:a.product_value_score??'',abcd_priority_factor:a.abcd_priority_factor??'',customer_product_revenue:a.customer_product_revenue??'',customer_product_margin:a.customer_product_margin??'',margin_pct:a.margin_pct??'',repeat_purchase_rate:a.repeat_purchase_rate??'',strategic_relevance_score:a.strategic_relevance_score??'',
+    spo_working_raw:s.spo_working_raw??'',spo_working_normalized_100:s.spo_working_normalized_100??'',spo_service_segment:s.spo_service_segment||'',spo_service_segment_color_hex:s.spo_service_segment_color_hex||'',
+    abcd_evidence_status:a.evidence_status||'',spo_evidence_explanation:s.spo_evidence_explanation||'',method_note:s.method_note||'SPO not calculated because one or more required customer-intelligence inputs are unavailable.'
+  }});
+}
+function downloadABCDSPOReady(){
+  if(!abcdCustomerRows.length){alert('Calculate customer-level ABCD first.');return}
+  const rows=abcdOperationsExportRows();
+  const headers=['customer_key','source_customer_id','order_id','product_id','product_name','commercial_offer','four_p_tag','rfm_segment','rfm_operational_factor','rfm_transaction_frequency','rfm_transaction_monetary','nps_score','nps_type','nps_operational_factor','abcd_class','product_value_score','abcd_priority_factor','customer_product_revenue','customer_product_margin','margin_pct','repeat_purchase_rate','strategic_relevance_score','spo_working_raw','spo_working_normalized_100','spo_service_segment','spo_service_segment_color_hex','abcd_evidence_status','spo_evidence_explanation','method_note'];
+  downloadFile('DOC_ROI_ABCD_CUSTOMER_INTELLIGENCE.csv',toCSV(rows,headers));
+}
 function spoPortfolioHeaders(){return ['schema_version','dataset_id','customer_key','source_customer_id','spo_service_segment','spo_service_segment_label','spo_service_segment_color_hex','spo_working_raw','spo_working_normalized_100','spo_evidence_explanation','rfm_dataset_id','rfm_period','rfm_content_score','rfm_transaction_score','rfm_post_sale_score','rfm_operational_factor','rfm_cognitive_category','rfm_cognitive_movement','rfm_segment_p1','rfm_segment_p2','rfm_recommended_action','rfm_recommended_channel','rfm_arpu','rfm_estimated_cost','nps_dataset_id','nps_latest_survey_date','nps_score','nps_type','nps_previous_score','nps_previous_type','nps_movement','nps_operational_factor','nps_main_factor','nps_main_subfactor','nps_desired_change','nps_recommended_action','nps_membership_joined','nps_country','abcd_dataset_id','abcd_analysis_period','primary_product_id','primary_product_name','abcd_class','abcd_product_value_score','abcd_operational_factor','abcd_margin_pct','abcd_strategic_relevance_score','customer_product_revenue','customer_product_margin','purchase_frequency','repeat_purchase_rate','product_mix','abcd_cross_sell_potential','cross_sell_candidate','abcd_upsell_potential','upsell_candidate','next_best_product','abcd_evidence_status','marketing_utm_source','marketing_utm_medium','marketing_utm_campaign','marketing_entry_4p','marketing_active_benefit_type','marketing_active_benefit_label','marketing_quantity','marketing_order_total','marketing_handoff_status','four_p_preference_operational','procurement_target_availability_pct','procurement_target_supplier_otif_pct','procurement_target_po_ack_hours','procurement_target_incident_response_hours','procurement_target_inventory_accuracy_pct','temporal_alignment_status','method_note']}
 function downloadSPOWorking(){buildSPOWorking();if(!spoRows.length){alert('RFM, NPS and ABCD customer data are required.');return}const headers=spoPortfolioHeaders();const isDE=spoRows.length===266&&spoRows.every(r=>String(r.customer_key||'').startsWith('DE-'));downloadFile(isDE?'DOC_ROI_SPO_WORKING_DON_ESPADIN.csv':'DOC_ROI_SPO_WORKING.csv',toCSV(spoRows,headers))}
-function downloadSPOCustomerPortfolio(){buildSPOWorking();if(!spoRows.length){alert('RFM, NPS and ABCD customer data are required.');return}const rows=[...spoRows].sort((a,b)=>(a.spo_service_segment||'').localeCompare(b.spo_service_segment||'')||((b.spo_working_normalized_100??-1)-(a.spo_working_normalized_100??-1))||String(a.customer_key).localeCompare(String(b.customer_key)));const isDE=rows.length===266&&rows.every(r=>String(r.customer_key||'').startsWith('DE-'));downloadFile(isDE?'DOC_ROI_SPO_CUSTOMER_PORTFOLIO_DON_ESPADIN.csv':'DOC_ROI_SPO_CUSTOMER_PORTFOLIO.csv',toCSV(rows,spoPortfolioHeaders()))}
+function prefixSourceFields(prefix,obj,skip){const out={};Object.entries(obj||{}).forEach(([k,v])=>{if(!(skip||[]).includes(k))out[`${prefix}${k}`]=v});return out}
+function spoCRMRows(){
+  if(!spoRows.length&&rfmRows.length&&npsRows.length&&abcdCustomerRows.length)buildSPOWorkingV14();
+  const mMap=new Map(marketingRows.filter(r=>text(r.customer_key).trim()).map(r=>[text(r.customer_key).trim(),r]));
+  const rMap=new Map(rfmRows.filter(r=>text(r.customer_key).trim()).map(r=>[text(r.customer_key).trim(),r]));
+  const nMap=new Map(npsRows.filter(r=>text(r.customer_key).trim()).map(r=>[text(r.customer_key).trim(),r]));
+  const aMap=new Map(abcdCustomerRows.filter(r=>text(r.customer_key).trim()).map(r=>[text(r.customer_key).trim(),r]));
+  return [...spoRows].sort((a,b)=>(spoSegmentMeta(a.spo_working_normalized_100).rank-spoSegmentMeta(b.spo_working_normalized_100).rank)||((b.spo_working_normalized_100??-1)-(a.spo_working_normalized_100??-1))||String(a.customer_key).localeCompare(String(b.customer_key))).map(s=>{
+    const k=text(s.customer_key).trim(),m=mMap.get(k)||{},r=rMap.get(k)||{},n=nMap.get(k)||{},a=aMap.get(k)||{};
+    return {
+      customer_key:k,source_customer_id:s.source_customer_id||k,
+      spo_working_normalized_100:s.spo_working_normalized_100,spo_service_segment:s.spo_service_segment,spo_service_segment_label:s.spo_service_segment_label,spo_service_segment_color_hex:s.spo_service_segment_color_hex,spo_working_raw:s.spo_working_raw,spo_evidence_explanation:s.spo_evidence_explanation,
+      primary_product_id:s.primary_product_id,primary_product_name:s.primary_product_name,abcd_class:s.abcd_class,abcd_product_value_score:s.abcd_product_value_score,abcd_operational_factor:s.abcd_operational_factor,
+      rfm_segment:s.rfm_segment,rfm_operational_factor:s.rfm_operational_factor,nps_score:s.nps_score,nps_type:s.nps_type,nps_operational_factor:s.nps_operational_factor,four_p_preference_operational:s.four_p_preference_operational,
+      procurement_target_availability_pct:s.procurement_target_availability_pct,procurement_target_supplier_otif_pct:s.procurement_target_supplier_otif_pct,procurement_target_po_ack_hours:s.procurement_target_po_ack_hours,procurement_target_incident_response_hours:s.procurement_target_incident_response_hours,procurement_target_inventory_accuracy_pct:s.procurement_target_inventory_accuracy_pct,
+      ...prefixSourceFields('marketing_',m,['customer_key','source_customer_id']),
+      ...prefixSourceFields('rfm_source_',r,['customer_key','source_customer_id']),
+      ...prefixSourceFields('nps_source_',n,['customer_key','source_customer_id']),
+      ...prefixSourceFields('abcd_source_',a,['customer_key','source_customer_id']),
+      ...prefixSourceFields('spo_',s,['customer_key','source_customer_id','spo_working_normalized_100','spo_service_segment','spo_service_segment_label','spo_service_segment_color_hex','spo_working_raw','spo_evidence_explanation','primary_product_id','primary_product_name','abcd_class','abcd_product_value_score','abcd_operational_factor','rfm_segment','rfm_operational_factor','nps_score','nps_type','nps_operational_factor','four_p_preference_operational','procurement_target_availability_pct','procurement_target_supplier_otif_pct','procurement_target_po_ack_hours','procurement_target_incident_response_hours','procurement_target_inventory_accuracy_pct'])
+    };
+  });
+}
+function unionHeaders(rows,first){const seen=new Set(first||[]),out=[...(first||[])];rows.forEach(r=>Object.keys(r).forEach(k=>{if(!seen.has(k)){seen.add(k);out.push(k)}}));return out}
+function downloadSPOCRM(){
+  if(!spoRows.length&&rfmRows.length&&npsRows.length&&abcdCustomerRows.length)buildSPOWorkingV14();
+  if(!spoRows.length){alert('Calculate SPO first from the ABCD step.');return}
+  const rows=spoCRMRows();
+  const first=['customer_key','source_customer_id','spo_working_normalized_100','spo_service_segment','spo_service_segment_label','spo_service_segment_color_hex','spo_working_raw','primary_product_id','primary_product_name','abcd_class','abcd_product_value_score','abcd_operational_factor','rfm_segment','rfm_operational_factor','nps_score','nps_type','nps_operational_factor','four_p_preference_operational','spo_evidence_explanation'];
+  downloadFile('DOC_ROI_SPO_CRM.csv',toCSV(rows,unionHeaders(rows,first)));
+}
+function downloadSPOCustomerPortfolio(){downloadSPOCRM()}
 function clearSPOFilters(){if($('spoCustomerSearch'))$('spoCustomerSearch').value='';if($('spoSegmentFilter'))$('spoSegmentFilter').value='ALL';if($('spoABCDFilter'))$('spoABCDFilter').value='ALL';renderSPOCustomerPortfolio()}
 function filteredSPORows(){let rows=[...spoRows];const q=text($('spoCustomerSearch')?.value).trim().toLowerCase();const seg=$('spoSegmentFilter')?.value||'ALL';const abcd=$('spoABCDFilter')?.value||'ALL';if(seg!=='ALL')rows=rows.filter(r=>r.spo_service_segment===seg);if(abcd!=='ALL')rows=rows.filter(r=>r.abcd_class===abcd);if(q)rows=rows.filter(r=>[r.customer_key,r.primary_product_name,r.rfm_segment,r.rfm_cognitive_category,r.nps_type,r.nps_main_factor,r.nps_main_subfactor,r.abcd_class,r.product_mix,r.cross_sell_candidate,r.upsell_candidate,r.next_best_product,r.four_p_preference_operational,r.marketing_utm_campaign].some(v=>text(v).toLowerCase().includes(q)));return rows.sort((a,b)=>(spoSegmentMeta(a.spo_working_normalized_100).rank-spoSegmentMeta(b.spo_working_normalized_100).rank)||((b.spo_working_normalized_100??-1)-(a.spo_working_normalized_100??-1))||String(a.customer_key).localeCompare(String(b.customer_key)))}
 function renderSPOCustomerPortfolio(){const host=$('spoCustomerPortfolio'),legend=$('spoSegmentLegend');if(!host)return;if(legend)legend.innerHTML=[{code:'SPO-1',label:'Priority Protection',range:'75–100',cls:'spo-seg-1'},{code:'SPO-2',label:'Enhanced Protection',range:'50–74.99',cls:'spo-seg-2'},{code:'SPO-3',label:'Managed Protection',range:'25–49.99',cls:'spo-seg-3'},{code:'SPO-4',label:'Standard Protection',range:'0–24.99',cls:'spo-seg-4'}].map(x=>`<span class="spo-segment-pill ${x.cls}"><i></i>${x.code} · ${x.label} · ${x.range}</span>`).join('');if(!spoRows.length){host.className='empty-state';host.innerHTML='<b>Customer portfolio not available</b>Load RFM + NPS + ABCD or use Example.';return}const rows=filteredSPORows();host.className='spo-customer-table';host.innerHTML=`<table><thead><tr><th>Customer</th><th>SPO service segment</th><th class="num">SPO</th><th>RFM evidence</th><th>NPS evidence</th><th>ABCD / Product evidence</th><th>Marketing / 4P</th><th>Procurement service targets</th></tr></thead><tbody>${rows.map(r=>`<tr><td><b>${esc(r.customer_key)}</b><br><small>${esc(r.source_customer_id)}</small></td><td>${segmentPillHTML(r)}<br><small>${esc(r.temporal_alignment_status)}</small></td><td class="num"><span class="spo-score">${fmt(r.spo_working_normalized_100)}</span><br><small>raw ${fmt(r.spo_working_raw)}</small></td><td class="spo-evidence-cell"><b>${esc(r.rfm_cognitive_category||'UNKNOWN')} · ${esc(r.rfm_segment||'UNKNOWN')}</b><small>Cognitive ${fmt(r.rfm_operational_factor)} · Content ${fmt(r.rfm_content_score)} · Transaction ${fmt(r.rfm_transaction_score)} · Post-sale ${fmt(r.rfm_post_sale_score)} · ${esc(r.rfm_cognitive_movement||'UNKNOWN')}</small><small>${esc(r.rfm_recommended_action||'')}</small></td><td class="spo-evidence-cell"><b>${esc(r.nps_type||'UNKNOWN')} · ${fmt(r.nps_score,0)}</b><small>Priority factor ${fmt(r.nps_operational_factor)} · ${esc(r.nps_movement||'UNKNOWN')} · ${esc(r.nps_main_factor||'UNKNOWN')} / ${esc(r.nps_main_subfactor||'')}</small><small>${esc(r.nps_recommended_action||'')}</small></td><td class="spo-evidence-cell"><b>${esc(r.primary_product_name||'UNKNOWN')} · Class ${esc(r.abcd_class||'UNKNOWN')}</b><small>Value ${fmt(r.abcd_product_value_score)} · Factor ${fmt(r.abcd_operational_factor)} · Margin ${fmt(r.abcd_margin_pct)}% · Strategic relevance ${fmt(r.abcd_strategic_relevance_score)}</small><small>Cross-sell: ${esc(r.cross_sell_candidate||'—')} · Upsell: ${esc(r.upsell_candidate||'—')} · Next: ${esc(r.next_best_product||'—')}</small></td><td class="spo-evidence-cell"><b>${esc(r.four_p_preference_operational||'UNKNOWN')}</b><small>${esc(r.marketing_utm_source||'')} / ${esc(r.marketing_utm_medium||'')} · ${esc(r.marketing_utm_campaign||'')}</small><small>${esc(r.marketing_active_benefit_label||'')}</small></td><td class="spo-evidence-cell"><b>Availability ${fmt(r.procurement_target_availability_pct)}% · OTIF ${fmt(r.procurement_target_supplier_otif_pct)}%</b><small>PO ack ≤ ${fmt(r.procurement_target_po_ack_hours)} h · Incident response ≤ ${fmt(r.procurement_target_incident_response_hours)} h · Inventory accuracy ${fmt(r.procurement_target_inventory_accuracy_pct)}%</small></td></tr>`).join('')}</tbody></table><div style="padding:10px 14px;font-size:12px;color:#607080">Showing ${rows.length} of ${spoRows.length} customers. CSV export always includes all customers unless you explicitly filter only the on-screen view in a future version.</div>`}
 function printSPOCustomerPortfolio(){buildSPOWorking();if(!spoRows.length){alert('RFM, NPS and ABCD customer data are required.');return}const rows=[...spoRows].sort((a,b)=>(spoSegmentMeta(a.spo_working_normalized_100).rank-spoSegmentMeta(b.spo_working_normalized_100).rank)||((b.spo_working_normalized_100??-1)-(a.spo_working_normalized_100??-1)));let host=$('printHost');if(host)host.remove();host=document.createElement('div');host.id='printHost';host.innerHTML=`<article class="spo-print-portfolio print-target"><h1>DOC ROI · Customer SPO Portfolio</h1><div class="meta">${rows.length} customers · Procurement working implementation layer · Generated ${new Date().toLocaleString('en-GB')}<br>Formal KAI·ROI SPO remains sovereign. This export explains the operational RFM × ABCD × NPS working priority used by Procurement.</div><div class="spo-legend">${['SPO-1','SPO-2','SPO-3','SPO-4'].map(code=>{const sample=rows.find(r=>r.spo_service_segment===code);return sample?segmentPillHTML(sample):''}).join('')}</div><table><thead><tr><th>Customer</th><th>Segment</th><th>SPO</th><th>RFM</th><th>NPS</th><th>ABCD / Product</th><th>Why / Service consequence</th></tr></thead><tbody>${rows.map(r=>`<tr><td><b>${esc(r.customer_key)}</b></td><td class="segment-cell">${segmentPillHTML(r)}</td><td><b>${fmt(r.spo_working_normalized_100)}</b></td><td>${esc(r.rfm_cognitive_category||'UNKNOWN')} / ${esc(r.rfm_segment||'UNKNOWN')} / factor ${fmt(r.rfm_operational_factor)} / ${esc(r.rfm_cognitive_movement||'UNKNOWN')}</td><td>${esc(r.nps_type||'UNKNOWN')} ${fmt(r.nps_score,0)} / factor ${fmt(r.nps_operational_factor)} / ${esc(r.nps_main_factor||'UNKNOWN')}</td><td>${esc(r.primary_product_name||'UNKNOWN')} / ${esc(r.abcd_class||'UNKNOWN')} / value ${fmt(r.abcd_product_value_score)} / factor ${fmt(r.abcd_operational_factor)}</td><td class="reason-cell">${esc(r.spo_evidence_explanation)}<br>Availability ${fmt(r.procurement_target_availability_pct)}% · OTIF ${fmt(r.procurement_target_supplier_otif_pct)}% · Ack ${fmt(r.procurement_target_po_ack_hours)}h · Incident ${fmt(r.procurement_target_incident_response_hours)}h</td></tr>`).join('')}</tbody></table></article>`;document.body.appendChild(host);document.body.classList.add('print-focus');setTimeout(()=>window.print(),80);window.addEventListener('afterprint',()=>{document.body.classList.remove('print-focus');host.remove()},{once:true})}
 function spoRowsForScope(scope){if(!spoRows.length)return [];const observedKeys=marketingRows.length?new Set(marketingRows.map(r=>text(r.customer_key).trim()).filter(Boolean)):null;const base=observedKeys?spoRows.filter(r=>observedKeys.has(text(r.customer_key).trim())):spoRows;if(scope==='ALL')return base;const row=commercialRows.find(r=>r.offer_id===scope);if(!row)return base;const tag=text(row.four_p_tag).trim();return base.filter(r=>r.four_p_preference_operational===tag)}
 function spoPriorityForScope(scope){const rows=spoRowsForScope(scope);const vals=rows.map(r=>num(r.spo_working_normalized_100)).filter(v=>v!==null);return {count:rows.length,avg:vals.length?vals.reduce((a,b)=>a+b,0)/vals.length:null}}
-function renderSPODemand(){const host=$('spoDemandOutput'),kpis=$('spoDemandKpis');if(!host||!kpis)return;if(!spoRows.length){kpis.innerHTML='';host.className='empty-state';host.innerHTML='<b>SPO demand view not available</b>Load the customer intelligence files to connect customer priority with product demand.';renderSPOCustomerPortfolio();return}const groups={'SPO-1':[],'SPO-2':[],'SPO-3':[],'SPO-4':[]};spoRows.forEach(r=>{if(groups[r.spo_service_segment])groups[r.spo_service_segment].push(r)});kpis.innerHTML=['SPO-1','SPO-2','SPO-3','SPO-4'].map(c=>{const g=groups[c];const av=g.map(r=>r.spo_working_normalized_100).filter(v=>v!==null);const meta=g.length?spoSegmentMeta(g[0].spo_working_normalized_100):({label:c==='SPO-1'?'Priority Protection':c==='SPO-2'?'Enhanced Protection':c==='SPO-3'?'Managed Protection':'Standard Protection'});return `<div class="kpi ${c==='SPO-1'?'good':c==='SPO-4'?'warn':''}"><div class="lbl">${c} customers</div><div class="val">${g.length}</div><div class="sub">${meta.label} · avg ${av.length?fmt(av.reduce((a,b)=>a+b,0)/av.length):'—'}</div></div>`}).join('');const byOffer=commercialRows.map(r=>{const s=spoPriorityForScope(r.offer_id);return {offer:r.offer_name||r.offer_id,tag:r.four_p_tag,count:s.count,avg:s.avg,demand:computeDemand(r).demand}});host.className='table-wrap';host.innerHTML=`<table><thead><tr><th>Commercial demand lens</th><th>4P</th><th class="num">Customers</th><th class="num">Avg SPO working</th><th class="num">Commercial demand</th><th>Procurement reading</th></tr></thead><tbody>${byOffer.map(x=>`<tr><td><b>${esc(x.offer)}</b></td><td>${esc(x.tag)}</td><td class="num">${fmt(x.count,0)}</td><td class="num"><b>${fmt(x.avg)}</b></td><td class="num">${fmt(x.demand)}</td><td>${x.avg===null?'Unknown customer priority':x.avg>=75?'SPO-1 service protection: strict SLA and rapid exception handling; quantity remains demand-led.':x.avg>=50?'SPO-2 enhanced protection: tighter supplier service control; quantity remains demand-led.':x.avg>=25?'SPO-3 managed protection: monitor stock and service evidence.':'SPO-4 standard protection: do not inflate stock solely because of priority.'}</td></tr>`).join('')}</tbody></table>`;renderSPOCustomerPortfolio()}
+function renderSPOCharts(){
+  const host=$('spoVisuals');if(!host)return;
+  if(!spoRows.length){host.innerHTML='';return}
+  const segCodes=['SPO-1','SPO-2','SPO-3','SPO-4'];
+  const counts=Object.fromEntries(segCodes.map(c=>[c,0]));const cross={};segCodes.forEach(c=>cross[c]={A:0,B:0,C:0,D:0});
+  spoRows.forEach(r=>{if(counts[r.spo_service_segment]!==undefined)counts[r.spo_service_segment]++;if(cross[r.spo_service_segment]&&validClass(r.abcd_class))cross[r.spo_service_segment][r.abcd_class]++});
+  const max=Math.max(1,...Object.values(counts));
+  const chart1=`<div class="spo-chart-card"><h3>SPO customer distribution</h3><p>Number of customers in each Procurement service-priority segment.</p><div class="spo-bars">${segCodes.map(c=>{const n=counts[c],meta=spoSegmentMeta(c==='SPO-1'?75:c==='SPO-2'?50:c==='SPO-3'?25:0);return `<div class="spo-bar-col"><div class="spo-bar-value">${n}</div><div class="spo-bar" style="height:${Math.max(3,n/max*155)}px;background:${meta.color}"></div><div class="spo-bar-label">${c}</div></div>`}).join('')}</div><div class="spo-crm-note">Population: ${spoRows.length} matched customers.</div></div>`;
+  const chart2=`<div class="spo-chart-card"><h3>ABCD inside each SPO segment</h3><p>Product relevance remains visible inside the customer-priority layer.</p><div class="spo-matrix"><div class="head">SPO / ABCD</div>${['A','B','C','D'].map(c=>`<div class="head">${c}</div>`).join('')}${segCodes.map(s=>`<div class="rowhead">${s}</div>${['A','B','C','D'].map(c=>`<div class="cell abcd-class-cell ${c}"><b>${cross[s][c]}</b></div>`).join('')}`).join('')}</div><div class="spo-crm-note">Counts are customer-level records, not purchase quantities.</div></div>`;
+  host.innerHTML=chart1+chart2;
+}
+function renderSPODemand(){const host=$('spoDemandOutput'),kpis=$('spoDemandKpis');if(!host||!kpis)return;if(!spoRows.length){kpis.innerHTML='';host.className='empty-state';host.innerHTML='<b>SPO demand view not available</b>Load the customer intelligence files to connect customer priority with product demand.';renderSPOCustomerPortfolio();renderSPOCharts();return}const groups={'SPO-1':[],'SPO-2':[],'SPO-3':[],'SPO-4':[]};spoRows.forEach(r=>{if(groups[r.spo_service_segment])groups[r.spo_service_segment].push(r)});kpis.innerHTML=['SPO-1','SPO-2','SPO-3','SPO-4'].map(c=>{const g=groups[c];const av=g.map(r=>r.spo_working_normalized_100).filter(v=>v!==null);const meta=g.length?spoSegmentMeta(g[0].spo_working_normalized_100):({label:c==='SPO-1'?'Priority Protection':c==='SPO-2'?'Enhanced Protection':c==='SPO-3'?'Managed Protection':'Standard Protection'});return `<div class="kpi ${c==='SPO-1'?'good':c==='SPO-4'?'warn':''}"><div class="lbl">${c} customers</div><div class="val">${g.length}</div><div class="sub">${meta.label} · avg ${av.length?fmt(av.reduce((a,b)=>a+b,0)/av.length):'—'}</div></div>`}).join('');const byOffer=commercialRows.map(r=>{const s=spoPriorityForScope(r.offer_id);return {offer:r.offer_name||r.offer_id,tag:r.four_p_tag,count:s.count,avg:s.avg,demand:computeDemand(r).demand}});host.className='table-wrap';host.innerHTML=`<table><thead><tr><th>Commercial demand lens</th><th>4P</th><th class="num">Customers</th><th class="num">Avg SPO working</th><th class="num">Commercial demand</th><th>Procurement reading</th></tr></thead><tbody>${byOffer.map(x=>`<tr><td><b>${esc(x.offer)}</b></td><td>${esc(x.tag)}</td><td class="num">${fmt(x.count,0)}</td><td class="num"><b>${fmt(x.avg)}</b></td><td class="num">${fmt(x.demand)}</td><td>${x.avg===null?'Unknown customer priority':x.avg>=75?'SPO-1 service protection: strict SLA and rapid exception handling; quantity remains demand-led.':x.avg>=50?'SPO-2 enhanced protection: tighter supplier service control; quantity remains demand-led.':x.avg>=25?'SPO-3 managed protection: monitor stock and service evidence.':'SPO-4 standard protection: do not inflate stock solely because of priority.'}</td></tr>`).join('')}</tbody></table>`;renderSPOCustomerPortfolio();renderSPOCharts()}
 
 
 function evidenceGateReady(){return marketingRows.length>0&&objectiveRows.length>0}
@@ -937,7 +1096,7 @@ function printSection(id){printElement(id)}
 function resetSession(scroll=true){marketingRows=[];objectiveRows=[];buyerPersonaRows=[];commercialRows=[];rfmRows=[];npsRows=[];abcdCustomerRows=[];spoRows=[];suppliers=[];model={};supplierSeq=1;['buyerPersona','buyerContext','buyerName','buyerTaxId','buyerAddress','effectiveDate','jurisdiction','slaDataSource','slaExclusions','slaRemedy','slaOtif','slaAck','slaDocs','slaTrace','slaQuality','slaInventory','slaBreakage','slaIncident'].forEach(id=>{if($(id))$(id).value=''});if($('reviewCadence'))$('reviewCadence').value='';$('commercialFileState').textContent='No Marketing-to-Purchase handoff loaded. The session is empty.';if($('rfmFileState'))$('rfmFileState').textContent='No RFM file loaded.';if($('npsFileState'))$('npsFileState').textContent='No NPS file loaded.';if($('abcdCustomerFileState'))$('abcdCustomerFileState').textContent='ABCD not generated yet.';if($('buyerPersonaFileState'))$('buyerPersonaFileState').textContent='Recommended file not loaded.';renderBuyerPersonaSnapshot();renderManualEditor(false);renderSuppliers();recalculate();if(scroll)activateTab('sec0')}
 
 const menuButton=document.querySelector('.hamb'),mainNav=$('mainNav');if(menuButton&&mainNav){menuButton.addEventListener('click',()=>{const open=mainNav.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open))});mainNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mainNav.classList.remove('open');menuButton.setAttribute('aria-expanded','false')}))}
-const TAB_IDS=['sec0','sec1','sec2','sec3','sec4','sec5','sec6','sec7'];
+const TAB_IDS=['sec0','sec2','sec3','sec4','sec5','sec6','sec7'];
 function workspaceTop(){const ws=document.querySelector('.workspace-wrap');if(!ws)return 0;const header=document.querySelector('.topbar');const top=ws.getBoundingClientRect().top+window.pageYOffset;const offset=(header?.offsetHeight||68)+14;return Math.max(0,top-offset)}
 function activateTab(target,scroll=true){if(!TAB_IDS.includes(target))return;
   if(scroll)window.scrollTo({top:workspaceTop(),behavior:'auto'});
@@ -947,6 +1106,355 @@ function activateTab(target,scroll=true){if(!TAB_IDS.includes(target))return;
 }
 document.querySelectorAll('#journeyBar button').forEach(b=>b.addEventListener('click',()=>activateTab(b.dataset.target)));
 document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#sec"]');if(!a)return;const id=a.getAttribute('href').slice(1);if(TAB_IDS.includes(id)){e.preventDefault();activateTab(id);if(mainNav){mainNav.classList.remove('open');menuButton?.setAttribute('aria-expanded','false')}}});
+
+
+
+// V15 · canonical ABCD customer calculation from loaded evidence
+let abcdOfferConfigState={};
+let spoActivated=false;
+const buildSPOWorkingV14=buildSPOWorking;
+const resetSessionV14=resetSession;
+
+function abcdWeightSettings(){
+  const ids=['wRevenue','wGrossMargin','wMarginPct','wVolume','wRepeat','wRotation','wCross','wUpsell','wStrategic'];
+  const vals=ids.map(id=>num($(id)?.value));
+  const total=vals.every(v=>v!==null)?vals.reduce((a,b)=>a+b,0):null;
+  if($('abcdWeightTotal'))$('abcdWeightTotal').value=total===null?'':total.toFixed(0);
+  return {revenue:vals[0],grossMargin:vals[1],marginPct:vals[2],volume:vals[3],repeat:vals[4],rotation:vals[5],cross:vals[6],upsell:vals[7],strategic:vals[8],total,thrA:num($('thrA')?.value)??80,thrB:num($('thrB')?.value)??60,thrC:num($('thrC')?.value)??40};
+}
+function abcdOfferKeyFromMarketing(r){const pid=text(r.product_id||r.sku||'PRODUCT').trim()||'PRODUCT';const tag=text(r.active_benefit_type||r.entry_4p||'UNKNOWN').trim()||'UNKNOWN';return pid+'|'+tag}
+function abcdOfferLabelFromMarketing(r){return text(r.active_benefit_label).trim()||((text(r.product_name||r.product_id||'Product').trim()||'Product')+' + '+(text(r.active_benefit_type||r.entry_4p||'Offer').trim()||'Offer'))}
+function sourceCostPerUnitForRows(rows){let cost=0,qty=0,hasAny=false;for(const r of rows){const q=num(r.quantity);if(q===null)continue;let rowCost=0,rowKnown=true;for(const f of ['product_cost','packaging_cost','delivery_cost_estimate','fulfilment_cost']){const v=num(r[f]);if(v===null){rowKnown=false;break}rowCost+=v}if(rowKnown){cost+=rowCost;qty+=q;hasAny=true}}return hasAny&&qty>0?cost/qty:null}
+function exampleABCDConfigForTag(tag){const x={
+  Price:{unit_cost:32,cross:25,upsell:30,strategic:40},
+  Distribution:{unit_cost:30,cross:30,upsell:25,strategic:50},
+  Brand:{unit_cost:25,cross:80,upsell:75,strategic:90},
+  Product:{unit_cost:20,cross:70,upsell:85,strategic:95}
+};return x[tag]||null}
+function syncABCDOfferConfig(render=true){
+  const groups=new Map();marketingRows.forEach(r=>{const k=abcdOfferKeyFromMarketing(r);if(!groups.has(k))groups.set(k,[]);groups.get(k).push(r)});
+  const next={};for(const [k,rows] of groups){const first=rows[0]||{},tag=text(first.active_benefit_type||first.entry_4p||'UNKNOWN').trim()||'UNKNOWN';const old=abcdOfferConfigState[k]||{};const sourceCost=sourceCostPerUnitForRows(rows);const ex=isDonEspadinClassroomState()?exampleABCDConfigForTag(tag):null;next[k]={key:k,product_id:text(first.product_id||first.sku||'PRODUCT'),product_name:text(first.product_name||first.product_id||'Product'),tag,offer_name:abcdOfferLabelFromMarketing(first),unit_cost:old.unit_cost??(sourceCost!==null?sourceCost:(ex?.unit_cost??'')),cross:old.cross??(ex?.cross??''),upsell:old.upsell??(ex?.upsell??''),strategic:old.strategic??(ex?.strategic??''),cost_source:sourceCost!==null?'SOURCE COST EVIDENCE':(ex?'EXAMPLE WORKING ASSUMPTION':'MISSING EVIDENCE')};}
+  abcdOfferConfigState=next;if(render)renderABCDOfferConfig();
+}
+function renderABCDOfferConfig(){const body=$('abcdOfferConfigBody');if(!body)return;const rows=Object.values(abcdOfferConfigState);if(!rows.length){body.innerHTML='<tr><td colspan="7" class="muted">Load Marketing → Purchase evidence to create the configuration rows.</td></tr>';return}body.innerHTML=rows.map((r,i)=>`<tr><td><b>${esc(r.offer_name)}</b><br><small>${esc(r.product_id)}</small></td><td>${esc(r.tag)}</td><td><input type="number" min="0" step="0.01" data-k="${esc(r.key)}" data-f="unit_cost" value="${esc(r.unit_cost)}"></td><td><input type="number" min="0" max="100" step="1" data-k="${esc(r.key)}" data-f="cross" value="${esc(r.cross)}"></td><td><input type="number" min="0" max="100" step="1" data-k="${esc(r.key)}" data-f="upsell" value="${esc(r.upsell)}"></td><td><input type="number" min="0" max="100" step="1" data-k="${esc(r.key)}" data-f="strategic" value="${esc(r.strategic)}"></td><td><small>${esc(r.cost_source)}${r.cross===''||r.upsell===''||r.strategic===''?' · STRATEGIC INPUT PENDING':''}</small></td></tr>`).join('');body.querySelectorAll('input').forEach(el=>el.addEventListener('input',()=>{const row=abcdOfferConfigState[el.dataset.k];if(row){abcdSourceMode='current';spoActivated=false;row[el.dataset.f]=el.value;calculateABCDCustomerRowsV15();renderABCDCustomerV15();renderDemand(rowsWithModel());renderSPOSourceGateV18()}}))}
+function customerABCDBaseRows(){
+  const rMap=new Map(rfmRows.filter(r=>text(r.customer_key).trim()).map(r=>[text(r.customer_key).trim(),r]));
+  const nMap=new Map(npsRows.filter(r=>text(r.customer_key).trim()).map(r=>[text(r.customer_key).trim(),r]));
+  const grouped=new Map();marketingRows.forEach(m=>{const k=text(m.customer_key).trim();if(!k)return;if(!grouped.has(k))grouped.set(k,[]);grouped.get(k).push(m)});
+  const rows=[];for(const [k,ms] of grouped){const rfm=rMap.get(k)||{},nps=nMap.get(k)||{};const offerGroups=new Map();ms.forEach(m=>{const ok=abcdOfferKeyFromMarketing(m);if(!offerGroups.has(ok))offerGroups.set(ok,[]);offerGroups.get(ok).push(m)});
+    let chosen=null;for(const [ok,ors] of offerGroups){const cfg=abcdOfferConfigState[ok]||{};const revenueVals=ors.map(x=>num(x.order_total)??num(x.product_subtotal)).filter(v=>v!==null);const revenue=revenueVals.length?revenueVals.reduce((a,b)=>a+b,0):null;const qtyVals=ors.map(x=>num(x.quantity)).filter(v=>v!==null);const qty=qtyVals.length?qtyVals.reduce((a,b)=>a+b,0):null;const unitCost=num(cfg.unit_cost);const margin=(revenue!==null&&qty!==null&&unitCost!==null)?revenue-(qty*unitCost):null;const cand={customer_key:k,source_customer_id:ors[0]?.source_customer_id||k,offer_key:ok,offer_name:cfg.offer_name||abcdOfferLabelFromMarketing(ors[0]||{}),tag:cfg.tag||text(ors[0]?.active_benefit_type||ors[0]?.entry_4p),product_id:cfg.product_id||text(ors[0]?.product_id||ors[0]?.sku),product_name:cfg.product_name||text(ors[0]?.product_name),order_id:text(ors[0]?.order_id||''),order_number:text(ors[0]?.order_number||''),quantity:qty,revenue,unit_cost:unitCost,margin,margin_pct:(margin!==null&&revenue>0)?margin/revenue*100:null,rfm,nps,frequency:num(rfm.transaction_frequency)??ors.length,repeat_rate:null,cross:num(cfg.cross),upsell:num(cfg.upsell),strategic:num(cfg.strategic),campaign:modeValue(ors.map(x=>x.utm_campaign)),handoff_status:modeValue(ors.map(x=>x.handoff_status))};cand.repeat_rate=cand.frequency!==null&&cand.frequency>1?Math.min(100,Math.max(0,(cand.frequency-1)/cand.frequency*100)):0;if(!chosen||((cand.margin??-1)>(chosen.margin??-1)))chosen=cand;}
+    if(chosen)rows.push(chosen);
+  }return rows;
+}
+function offerRotationScores(){const qty=new Map();marketingRows.forEach(m=>{const k=abcdOfferKeyFromMarketing(m),q=num(m.quantity);if(q!==null)qty.set(k,(qty.get(k)||0)+q)});const max=qty.size?Math.max(...qty.values()):null;const out=new Map();qty.forEach((v,k)=>out.set(k,max&&max>0?v/max*100:null));return out}
+function calculateABCDCustomerRowsV15(){
+  if(!marketingRows.length){abcdCustomerRows=[];return []}syncABCDOfferConfig(false);const base=customerABCDBaseRows(),w=abcdWeightSettings(),rot=offerRotationScores();const maxRevenue=base.map(x=>x.revenue).filter(v=>v!==null);const maxMargin=base.map(x=>x.margin).filter(v=>v!==null);const maxQty=base.map(x=>x.quantity).filter(v=>v!==null);const mr=maxRevenue.length?Math.max(...maxRevenue):null,mm=maxMargin.length?Math.max(...maxMargin):null,mq=maxQty.length?Math.max(...maxQty):null;const weightMap={revenue:w.revenue,gross_margin:w.grossMargin,margin_pct:w.marginPct,volume:w.volume,repeat:w.repeat,rotation:w.rotation,cross:w.cross,upsell:w.upsell,strategic:w.strategic};const weightsValid=w.total!==null&&Math.abs(w.total-100)<.001;
+  abcdCustomerRows=base.map(x=>{const scores={revenue:(x.revenue!==null&&mr>0)?x.revenue/mr*100:null,gross_margin:(x.margin!==null&&mm>0)?Math.max(0,x.margin/mm*100):null,margin_pct:x.margin_pct!==null?Math.max(0,Math.min(100,x.margin_pct)):null,volume:(x.quantity!==null&&mq>0)?x.quantity/mq*100:null,repeat:x.repeat_rate,rotation:rot.get(x.offer_key)??null,cross:x.cross,upsell:x.upsell,strategic:x.strategic};const missing=Object.entries(weightMap).filter(([k,wt])=>wt!==null&&wt>0&&(scores[k]===null||scores[k]===undefined||!Number.isFinite(Number(scores[k])))).map(([k])=>k);let score=null,cls='UNKNOWN';if(weightsValid&&!missing.length){score=Object.entries(weightMap).reduce((sum,[k,wt])=>sum+Number(scores[k])*Number(wt),0)/100;cls=score>=w.thrA?'A':score>=w.thrB?'B':score>=w.thrC?'C':'D'}const factor=cls==='A'?4:cls==='B'?3:cls==='C'?2:cls==='D'?1:'';return {schema_version:'DOCROI_ABCD_COMPASS_2.0',dataset_id:'DOC_ROI_ABCD_COMPASS_CURRENT_SESSION',customer_key:x.customer_key,source_customer_id:x.source_customer_id,analysis_period:'CURRENT SESSION',order_id:x.order_id,order_number:x.order_number,primary_product_id:x.product_id,primary_product_name:x.product_name,commercial_offer:x.offer_name,four_p_tag:x.tag,primary_product_class:cls,best_product_class:cls,product_value_score:score===null?'':score,abcd_priority_factor:factor,customer_product_revenue:x.revenue===null?'':x.revenue,customer_product_margin:x.margin===null?'':x.margin,margin_pct:x.margin_pct===null?'':x.margin_pct,purchase_frequency:x.frequency===null?'':x.frequency,repeat_purchase_rate:x.repeat_rate===null?'':x.repeat_rate,product_mix:x.product_name,cross_sell_potential:x.cross===null?'':x.cross,cross_sell_candidate:'',upsell_potential:x.upsell===null?'':x.upsell,upsell_candidate:'',next_best_product:'',strategic_relevance_score:x.strategic===null?'':x.strategic,rotation_score:scores.rotation===null?'':scores.rotation,revenue_score:scores.revenue===null?'':scores.revenue,gross_margin_score:scores.gross_margin===null?'':scores.gross_margin,margin_pct_score:scores.margin_pct===null?'':scores.margin_pct,volume_score:scores.volume===null?'':scores.volume,repeat_purchase_score:scores.repeat===null?'':scores.repeat,rfm_segment:x.rfm.segment_p2||x.rfm.cognitive_category||'',rfm_transaction_frequency:x.rfm.transaction_frequency||'',rfm_transaction_monetary:x.rfm.transaction_monetary||'',nps_score:x.nps.latest_nps_score??x.nps.nps_score??'',nps_type:x.nps.latest_nps_type||x.nps.nps_type||'',utm_campaign:x.campaign,handoff_status:x.handoff_status,evidence_status:missing.length?'MISSING EVIDENCE: '+missing.join(' | '):(weightsValid?'CALCULATED FROM LOADED EVIDENCE + EXPLICIT ABCD CONFIGURATION':'INVALID WEIGHT TOTAL')};});return abcdCustomerRows;
+}
+function renderABCDOfferSummary(){const rows=abcdCustomerRows;const kpis=$('abcdSummaryKpis');if(!kpis)return;const counts={A:0,B:0,C:0,D:0,UNKNOWN:0};rows.forEach(r=>counts[validClass(r.primary_product_class)?r.primary_product_class:'UNKNOWN']++);kpis.innerHTML=['A','B','C','D','UNKNOWN'].map(c=>`<div class="kpi ${c==='A'?'good':c==='D'?'bad':''}"><div class="lbl">${c==='UNKNOWN'?'Unknown':'Class '+c}</div><div class="val">${counts[c]}</div><div class="sub">customer purchase(s)</div></div>`).join('')}
+function renderABCDCustomerV15(){
+  const out=$('abcdCustomerOutput'),valid=$('abcdValidation');if(!out)return;renderABCDOfferSummary();const w=abcdWeightSettings();const classified=abcdCustomerRows.filter(r=>validClass(r.primary_product_class)).length;const unknown=abcdCustomerRows.length-classified;const configMissing=Object.values(abcdOfferConfigState).filter(r=>num(r.unit_cost)===null||num(r.cross)===null||num(r.upsell)===null||num(r.strategic)===null).length;if(valid){valid.innerHTML=`<b>${classified}/${abcdCustomerRows.length||0} customer rows classified.</b> Weight total: ${w.total===null?'UNKNOWN':fmt(w.total,0)+'%'}. ${configMissing?configMissing+' offer configuration row(s) still need evidence. ':''}${unknown?unknown+' customer row(s) remain UNKNOWN.':'ABCD customer export is ready.'}`;valid.style.borderLeftColor=(unknown||configMissing||w.total!==100)?'#a86400':'#177245'}if(!abcdCustomerRows.length){out.className='empty-state';out.innerHTML='<b>ABCD classification not available</b>Load evidence and complete the missing ABCD configuration.';renderABCDChartV15();return}out.className='abcd-customer-wrap';out.innerHTML=`<table><thead><tr><th>Customer</th><th>Purchase / offer</th><th>RFM</th><th>NPS</th><th class="num">Units</th><th class="num">Revenue</th><th class="num">Margin</th><th class="num">Repeat</th><th class="num">Product value</th><th>ABCD</th><th>Evidence</th></tr></thead><tbody>${abcdCustomerRows.map(r=>`<tr><td><b>${esc(r.customer_key)}</b></td><td><b>${esc(r.primary_product_name||'—')}</b><br><small>${esc(r.commercial_offer||r.four_p_tag||'—')}</small></td><td>${esc(r.rfm_segment||'—')}<br><small>F ${esc(r.rfm_transaction_frequency||'—')} · M ${esc(r.rfm_transaction_monetary||'—')}</small></td><td>${esc(r.nps_type||'—')}<br><small>${esc(r.nps_score||'—')}</small></td><td class="num">${fmt(num((marketingEvidenceForCustomer(r.customer_key)||{}).quantity),0)}</td><td class="num">${money(num(r.customer_product_revenue))}</td><td class="num">${money(num(r.customer_product_margin))}<br><small>${pct(num(r.margin_pct))}</small></td><td class="num">${pct(num(r.repeat_purchase_rate))}</td><td class="num"><b>${fmt(num(r.product_value_score),1)}</b></td><td class="abcd-class-cell ${esc(r.primary_product_class||'UNKNOWN')}">${esc(r.primary_product_class||'UNKNOWN')}</td><td><small>${esc(r.evidence_status||'')}</small></td></tr>`).join('')}</tbody></table>`;renderABCDChartV15();}
+function renderABCDChartV15(){const host=$('abcdDistributionChart');if(!host)return;if(!abcdCustomerRows.length){host.classList.add('hidden');host.innerHTML='';return}const groups=new Map();abcdCustomerRows.forEach(r=>{const key=r.commercial_offer||r.primary_product_name||'Product';if(!groups.has(key))groups.set(key,{A:0,B:0,C:0,D:0,UNKNOWN:0});const c=validClass(r.primary_product_class)?r.primary_product_class:'UNKNOWN';groups.get(key)[c]++});const max=Math.max(1,...[...groups.values()].map(g=>g.A+g.B+g.C+g.D+g.UNKNOWN));host.classList.remove('hidden');host.innerHTML=`<div class="abcd-chart-head"><div><h3>ABCD distribution by product / commercial offer</h3><p>X-axis = product / offer. Y-axis = customer purchases classified from the loaded population.</p></div><div class="abcd-chart-legend"><span><i style="background:rgba(23,114,69,.60)"></i>A</span><span><i style="background:rgba(10,111,174,.58)"></i>B</span><span><i style="background:rgba(201,154,74,.60)"></i>C</span><span><i style="background:rgba(180,35,24,.55)"></i>D</span></div></div><div class="abcd-bars">${[...groups.entries()].map(([name,g])=>{const total=g.A+g.B+g.C+g.D+g.UNKNOWN;const px=v=>Math.max(0,(v/max)*220);return `<div class="abcd-bar-col"><div class="abcd-bar-total">${total}</div><div class="abcd-bar-stack" style="height:${Math.max(3,(total/max)*220)}px">${['A','B','C','D'].map(c=>g[c]?`<div class="abcd-bar-seg ${c}" style="height:${(g[c]/total)*100}%" title="${c}: ${g[c]}"></div>`:'').join('')}</div><div class="abcd-bar-label">${esc(name.replace('Don Espadín + ','').replace('Don Espadin + ',''))}</div></div>`}).join('')}</div><div class="abcd-y-note">Loaded population: ${abcdCustomerRows.length} customer purchase(s). Unknown classifications are retained in the CSV and excluded from the coloured stack.</div>`}
+function computeABCD(){
+  const cfgByKey=abcdOfferConfigState;const byOffer=new Map();abcdCustomerRows.forEach(a=>{const m=marketingEvidenceForCustomer(a.customer_key);const k=m?abcdOfferKeyFromMarketing(m):(a.primary_product_id+'|'+a.four_p_tag);if(!byOffer.has(k))byOffer.set(k,[]);byOffer.get(k).push(a)});return commercialRows.map(r=>{const key=(text(r.product_id||'PRODUCT').trim()||'PRODUCT')+'|'+(text(r.four_p_tag||'UNKNOWN').trim()||'UNKNOWN');const arr=byOffer.get(key)||[];const scores=arr.map(a=>num(a.product_value_score)).filter(v=>v!==null);const avg=scores.length?scores.reduce((a,b)=>a+b,0)/scores.length:null;const w=abcdWeightSettings();const cls=avg===null?'UNKNOWN':avg>=w.thrA?'A':avg>=w.thrB?'B':avg>=w.thrC?'C':'D';const cfg=cfgByKey[key]||{};const rot=offerRotationScores().get(key)??null;return {...r,rotation_score:rot,margin_score:null,stock_turnover:null,stock_efficiency_score:null,abcd_score:avg,abcd_class:cls,abcd_source:arr.length?'CUSTOMER ABCD AGGREGATED':'MISSING',abcd_priority_factor_effective:cls==='A'?4:cls==='B'?3:cls==='C'?2:cls==='D'?1:null,cross_sell_potential_pct:num(cfg.cross),upsell_potential_pct:num(cfg.upsell),strategic_relevance_score:num(cfg.strategic),repeat_purchase_rate_pct:arr.length?arr.map(a=>num(a.repeat_purchase_rate)).filter(v=>v!==null).reduce((a,b)=>a+b,0)/Math.max(1,arr.map(a=>num(a.repeat_purchase_rate)).filter(v=>v!==null).length):null};})
+}
+function renderABCD(){renderABCDCustomerV15()}
+function generateABCDFromLoadedEvidence(){if(!marketingRows.length){alert('Load Marketing → Purchase evidence first.');return}syncABCDOfferConfig();calculateABCDCustomerRowsV15();if($('abcdCustomerFileState'))$('abcdCustomerFileState').textContent=`Calculated inside Compass: ${abcdCustomerRows.length} customer row(s).`;renderABCDCustomerV15();}
+function calculateSPOAndContinue(){syncABCDOfferConfig();calculateABCDCustomerRowsV15();const unknown=abcdCustomerRows.filter(r=>!validClass(r.primary_product_class)).length;if(!abcdCustomerRows.length){alert('ABCD customer classification is not available yet.');return}if(unknown){alert(`${unknown} customer ABCD row(s) are still UNKNOWN. Complete the missing cost / strategic evidence before calculating SPO.`);renderABCDCustomerV15();return}if(!rfmRows.length||!npsRows.length){alert('RFM and NPS are required to calculate the customer-level SPO working layer.');return}spoActivated=true;buildSPOWorkingV14();recalculate();activateTab('sec3',true)}
+function buildSPOWorking(){if(!spoActivated){spoRows=[];return []}return buildSPOWorkingV14()}
+const recalculateV14=recalculate;
+recalculate=function(){syncABCDOfferConfig();calculateABCDCustomerRowsV15();recalculateV14();renderABCDCustomerV15()}
+resetSession=function(scroll=true){abcdOfferConfigState={};spoActivated=false;resetSessionV14(scroll);renderABCDOfferConfig();renderABCDCustomerV15()}
+
+
+
+// V18 · SPO source gate, explicit calculation and full SPO.CRM preview
+let abcdSourceMode='current';
+
+function normalizeABCDForSPO(rows){
+  return (rows||[]).filter(r=>text(r.customer_key).trim()).map(r=>{
+    const cls=text(r.primary_product_class||r.abcd_class||r.best_product_class).trim().toUpperCase();
+    const factorRaw=num(r.abcd_priority_factor??r.abcd_operational_factor);
+    const factor=factorRaw!==null?factorRaw:(cls==='A'?4:cls==='B'?3:cls==='C'?2:cls==='D'?1:'');
+    return {...r,
+      customer_key:text(r.customer_key).trim(),
+      source_customer_id:r.source_customer_id||r.customer_key||'',
+      primary_product_id:r.primary_product_id||r.product_id||'',
+      primary_product_name:r.primary_product_name||r.product_name||'',
+      primary_product_class:cls,
+      best_product_class:r.best_product_class||cls,
+      product_value_score:r.product_value_score??r.abcd_product_value_score??r.abcd_score??'',
+      abcd_priority_factor:factor,
+      customer_product_revenue:r.customer_product_revenue??r.net_revenue_eur??'',
+      customer_product_margin:r.customer_product_margin??r.gross_margin??'',
+      margin_pct:r.margin_pct??'',
+      purchase_frequency:r.purchase_frequency??r.rfm_transaction_frequency??'',
+      repeat_purchase_rate:r.repeat_purchase_rate??r.repeat_purchase_rate_pct??'',
+      strategic_relevance_score:r.strategic_relevance_score??'',
+      evidence_status:r.evidence_status||'IMPORTED ABCD CUSTOMER INTELLIGENCE'
+    };
+  });
+}
+
+function importSPOABCDCSV(evt){
+  const f=evt.target.files?.[0];if(!f)return;
+  const reader=new FileReader();
+  reader.onload=()=>{try{
+    const rows=parseCSV(reader.result);
+    if(!rows.length){alert('The ABCD CSV contains no data rows.');return}
+    if(!('customer_key' in rows[0])){alert('The ABCD CSV must contain customer_key.');return}
+    const normalized=normalizeABCDForSPO(rows);
+    if(!normalized.length){alert('No valid customer_key rows were found in the ABCD CSV.');return}
+    abcdCustomerRows=normalized;abcdSourceMode='imported';spoActivated=false;
+    if($('abcdCustomerFileState'))$('abcdCustomerFileState').textContent=`Imported for SPO: ${normalized.length} ABCD customer row(s).`;
+    recalculate();
+  }catch(e){console.error(e);alert('The ABCD CSV could not be read. Use the customer-level ABCD export from Compass or a compatible DOC ROI file.')}};
+  reader.readAsText(f);evt.target.value='';
+}
+
+function useCurrentABCDForSPO(){
+  abcdSourceMode='current';spoActivated=false;
+  syncABCDOfferConfig(false);calculateABCDCustomerRowsV15();
+  if(!abcdCustomerRows.length){alert('Current ABCD is not available yet. Complete Step 01 first.');return}
+  recalculate();
+}
+
+function invalidateSPOV18(){spoActivated=false;spoRows=[];renderSPOSourceGateV18();}
+
+function sourceKeySet(rows){return new Set((rows||[]).map(r=>text(r.customer_key).trim()).filter(Boolean))}
+function sameKeySet(a,b){if(a.size!==b.size)return false;for(const k of a)if(!b.has(k))return false;return true}
+function spoSourceStatusV18(){
+  const rs=uniqueKeyStats(rfmRows),ns=uniqueKeyStats(npsRows),as=uniqueKeyStats(abcdCustomerRows);
+  const rk=sourceKeySet(rfmRows),nk=sourceKeySet(npsRows),ak=sourceKeySet(abcdCustomerRows);
+  const common=[...rk].filter(k=>nk.has(k)&&ak.has(k));
+  const badABCD=abcdCustomerRows.filter(r=>!validClass(r.primary_product_class||r.abcd_class)).length;
+  const badRFM=rfmRows.filter(r=>num(r.cognitive_score)===null).length;
+  const badNPS=npsRows.filter(r=>num(r.nps_priority_factor)===null).length;
+  const structural=rs.rows>0&&ns.rows>0&&as.rows>0&&rs.missing===0&&ns.missing===0&&as.missing===0&&rs.duplicates===0&&ns.duplicates===0&&as.duplicates===0;
+  const exact=structural&&sameKeySet(rk,nk)&&sameKeySet(rk,ak);
+  const valid=exact&&badABCD===0&&badRFM===0&&badNPS===0;
+  return {rs,ns,as,rk,nk,ak,common:common.length,badABCD,badRFM,badNPS,structural,exact,valid};
+}
+
+function setSpoSourceCardV18(prefix,ready,note){
+  const badge=$(prefix+'Badge'),state=$(prefix+'State');
+  if(badge){badge.textContent=ready?'LOADED':'PENDING';badge.className='spo-source-status '+(ready?'ready':'');}
+  if(state)state.textContent=note;
+}
+
+function renderSPOSourceGateV18(){
+  if(!$('spoCalculateBtn'))return;
+  const st=spoSourceStatusV18();
+  setSpoSourceCardV18('spoRfm',rfmRows.length>0,rfmRows.length?`${st.rs.rows} row(s) · ${st.rs.unique} unique customer keys${st.badRFM?` · ${st.badRFM} missing operational factor(s)`:''}`:'RFM pending. Import the customer-level RFM file.');
+  setSpoSourceCardV18('spoNps',npsRows.length>0,npsRows.length?`${st.ns.rows} customer record(s) · ${st.ns.unique} unique customer keys${st.badNPS?` · ${st.badNPS} missing priority factor(s)`:''}`:'NPS pending. Import survey history or the customer-level NPS file.');
+  setSpoSourceCardV18('spoAbcd',abcdCustomerRows.length>0,abcdCustomerRows.length?`${st.as.rows} customer row(s) · ${st.as.unique} unique customer keys · ${abcdSourceMode==='imported'?'imported CSV':'current Step 01 ABCD'}${st.badABCD?` · ${st.badABCD} invalid/UNKNOWN class(es)`:''}`:'ABCD pending. Import a compatible customer CSV or use the current Step 01 ABCD.');
+  const badge=$('spoGateBadge'),validation=$('spoSourceValidation'),btn=$('spoCalculateBtn'),hint=$('spoCalculateHint');
+  if(st.valid){
+    badge.textContent='READY';badge.className='gate-status ready';validation.className='spo-source-validation ready';
+    validation.innerHTML=`<b>Source match OK.</b> ${st.common} customer keys are aligned 1:1 across RFM, NPS and ABCD. No duplicate or missing customer keys were detected.`;
+    btn.disabled=false;btn.textContent=spoActivated?'Recalculate SPO':'Calculate SPO';
+    hint.textContent=spoActivated?`SPO is active for ${spoRows.length} customer(s). Recalculate after any source change.`:`Ready to calculate ${st.common} customer SPO records.`;
+  }else{
+    badge.textContent='PENDING';badge.className='gate-status open';validation.className='spo-source-validation warn';
+    const issues=[];
+    if(!rfmRows.length)issues.push('RFM missing');if(!npsRows.length)issues.push('NPS missing');if(!abcdCustomerRows.length)issues.push('ABCD missing');
+    if(st.rs.duplicates||st.ns.duplicates||st.as.duplicates)issues.push('duplicate customer_key detected');
+    if(st.rs.missing||st.ns.missing||st.as.missing)issues.push('missing customer_key detected');
+    if(st.structural&&!st.exact)issues.push(`customer-key mismatch: ${st.common} common`);
+    if(st.badABCD)issues.push(`${st.badABCD} invalid ABCD class(es)`);if(st.badRFM)issues.push(`${st.badRFM} RFM factor(s) missing`);if(st.badNPS)issues.push(`${st.badNPS} NPS factor(s) missing`);
+    validation.innerHTML=`<b>SPO source gate is not ready.</b> ${issues.join(' · ')||'Load the three customer intelligence sources.'}`;
+    btn.disabled=true;btn.textContent='Calculate SPO';hint.textContent='Load and align the three sources to enable the calculation.';
+  }
+  if($('spoResultsWrap'))$('spoResultsWrap').classList.toggle('hidden',!(spoActivated&&spoRows.length));
+}
+
+function calculateSPOFromGate(){
+  const st=spoSourceStatusV18();renderSPOSourceGateV18();
+  if(!st.valid){alert('SPO cannot be calculated yet. RFM, NPS and ABCD must contain the same unique customer_key population and valid operating factors.');return}
+  spoActivated=true;buildSPOWorkingV14();recalculate();
+  renderSPOSourceGateV18();
+  if($('spoResultsWrap'))$('spoResultsWrap').classList.remove('hidden');
+  requestAnimationFrame(()=>{const node=$('spoResultsWrap');if(node)node.scrollIntoView({behavior:'auto',block:'start'})});
+}
+
+function goToPurchaseAfterSPO(){if(!spoActivated||!spoRows.length){alert('Calculate SPO before continuing to Purchase Planning.');return}activateTab('sec4')}
+
+// In V18 source changes invalidate the existing SPO result.
+function importIntelligenceCSVV18(evt,type){
+  const f=evt.target.files?.[0];if(!f)return;const reader=new FileReader();
+  reader.onload=()=>{try{const rows=parseCSV(reader.result);if(!rows.length){alert('The CSV contains no data rows.');return}
+    if(type==='RFM'){rfmRows=rows;if($('rfmFileState'))$('rfmFileState').textContent=`${f.name}: ${rows.length} RFM row(s) loaded.`}
+    if(type==='NPS'){npsRows=normalizeNPSSurveyHistory(rows);if($('npsFileState'))$('npsFileState').textContent=`${f.name}: ${rows.length} survey row(s) → ${npsRows.length} customer NPS record(s).`}
+    spoActivated=false;spoRows=[];recalculate();
+  }catch(e){console.error(e);alert('The CSV could not be read. Please use the DOC ROI source template.')}};reader.readAsText(f);evt.target.value='';
+}
+importIntelligenceCSV=importIntelligenceCSVV18;
+
+function renderSPOCustomerPortfolio(){
+  const host=$('spoCustomerPortfolio'),legend=$('spoSegmentLegend');if(!host)return;
+  if(legend)legend.innerHTML=[{code:'SPO-1',label:'Priority Protection',range:'75–100',cls:'spo-seg-1'},{code:'SPO-2',label:'Enhanced Protection',range:'50–74.99',cls:'spo-seg-2'},{code:'SPO-3',label:'Managed Protection',range:'25–49.99',cls:'spo-seg-3'},{code:'SPO-4',label:'Standard Protection',range:'0–24.99',cls:'spo-seg-4'}].map(x=>`<span class="spo-segment-pill ${x.cls}"><i></i>${x.code} · ${x.label} · ${x.range}</span>`).join('');
+  if(!spoActivated||!spoRows.length){host.className='empty-state';host.innerHTML='<b>Customer portfolio not available</b>Validate RFM + NPS + ABCD and calculate SPO.';return}
+  const allowed=new Set(filteredSPORows().map(r=>r.customer_key));
+  const crm=spoCRMRows().filter(r=>allowed.has(r.customer_key));
+  const first=['spo_service_segment','spo_working_normalized_100','customer_key','source_customer_id','spo_service_segment_label','primary_product_id','primary_product_name','abcd_class','abcd_product_value_score','abcd_operational_factor','rfm_segment','rfm_operational_factor','nps_score','nps_type','nps_operational_factor','four_p_preference_operational','spo_evidence_explanation'];
+  const headers=unionHeaders(crm,first).filter(h=>!['spo_service_segment_color_hex'].includes(h));
+  const rest=headers.filter(h=>!['spo_service_segment','spo_working_normalized_100'].includes(h));
+  host.className='spo-customer-table';
+  host.innerHTML=`<table><thead><tr><th>SPO</th>${rest.map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${crm.map(r=>{const meta=spoSegmentMeta(num(r.spo_working_normalized_100));const style=`background:${esc(r.spo_service_segment_color_hex||meta.color)};color:${meta.text}`;return `<tr><td class="spo-crm-segment-cell" style="${style}">${esc(r.spo_service_segment||meta.code)}<small>${esc(r.spo_service_segment_label||meta.label)} · ${fmt(num(r.spo_working_normalized_100),1)}</small></td>${rest.map(h=>{const v=r[h];return `<td class="spo-crm-value" title="${esc(v??'')}">${esc(v===null||v===undefined||v===''?'—':v)}</td>`}).join('')}</tr>`}).join('')}</tbody></table><div style="padding:9px 12px;font-size:10.5px;color:#607080">Showing ${crm.length} of ${spoRows.length} customer(s), ordered from highest to lowest SPO priority. The downloadable SPO.CRM contains the complete unfiltered customer lineage.</div>`;
+}
+
+function downloadSPOCRM(){
+  if(!spoActivated||!spoRows.length){alert('Calculate SPO first.');return}
+  const rows=spoCRMRows();
+  const first=['customer_key','source_customer_id','spo_working_normalized_100','spo_service_segment','spo_service_segment_label','spo_service_segment_color_hex','spo_working_raw','primary_product_id','primary_product_name','abcd_class','abcd_product_value_score','abcd_operational_factor','rfm_segment','rfm_operational_factor','nps_score','nps_type','nps_operational_factor','four_p_preference_operational','spo_evidence_explanation'];
+  downloadFile('DOC_ROI_SPO_CRM.csv',toCSV(rows,unionHeaders(rows,first)));
+}
+
+const printSPOCustomerPortfolioV17=printSPOCustomerPortfolio;
+printSPOCustomerPortfolio=function(){if(!spoActivated||!spoRows.length){alert('Calculate SPO first.');return}return printSPOCustomerPortfolioV17()}
+
+const renderSPODemandV17=renderSPODemand;
+renderSPODemand=function(){
+  if(!spoActivated){
+    const host=$('spoDemandOutput'),kpis=$('spoDemandKpis'),visual=$('spoVisuals');
+    if(kpis)kpis.innerHTML='';if(visual)visual.innerHTML='';
+    if(host){host.className='empty-state';host.innerHTML='<b>SPO demand view not available</b>Validate the three source layers and calculate SPO first.'}
+    renderSPOCustomerPortfolio();return;
+  }
+  renderSPODemandV17();
+}
+
+const generateABCDFromLoadedEvidenceV17=generateABCDFromLoadedEvidence;
+generateABCDFromLoadedEvidence=function(){abcdSourceMode='current';spoActivated=false;spoRows=[];return generateABCDFromLoadedEvidenceV17()}
+
+// Recalculate current ABCD unless an external ABCD customer file is intentionally active.
+recalculate=function(){
+  syncABCDOfferConfig();
+  if(abcdSourceMode!=='imported')calculateABCDCustomerRowsV15();
+  recalculateV14();
+  renderABCDCustomerV15();
+  renderSPOSourceGateV18();
+}
+
+const resetSessionV17Final=resetSession;
+resetSession=function(scroll=true){abcdSourceMode='current';spoActivated=false;spoRows=[];resetSessionV17Final(scroll);renderSPOSourceGateV18()}
+
+
+
+
+// V19 · reliable SPO build, segment-focused visualization and full SPO.CRM lineage
+function buildSPOWorkingV19(){
+  spoRows=[];
+  const rs=uniqueKeyStats(rfmRows),ns=uniqueKeyStats(npsRows),as=uniqueKeyStats(abcdCustomerRows);
+  if(!rfmRows.length||!npsRows.length||!abcdCustomerRows.length){
+    renderIntegrationValidation({rs,ns,as,matched:0,allMatch:false,temporalReview:0});
+    return [];
+  }
+  const rMap=new Map(rfmRows.filter(r=>text(r.customer_key).trim()).map(r=>[text(r.customer_key).trim(),r]));
+  const nMap=new Map(npsRows.filter(r=>text(r.customer_key).trim()).map(r=>[text(r.customer_key).trim(),r]));
+  const aMap=new Map(abcdCustomerRows.filter(r=>text(r.customer_key).trim()).map(r=>[text(r.customer_key).trim(),r]));
+  const mPref=marketingPreferenceMap();
+  const common=[...rMap.keys()].filter(k=>nMap.has(k)&&aMap.has(k)).sort();
+  spoRows=common.map(k=>{
+    const r=rMap.get(k)||{},n=nMap.get(k)||{},a=aMap.get(k)||{};
+    const cls=text(a.primary_product_class||a.abcd_class||a.best_product_class).trim().toUpperCase();
+    const rf=num(r.cognitive_score??r.rfm_operational_factor);
+    const nf=num(n.nps_priority_factor??n.nps_operational_factor);
+    let af=num(a.abcd_priority_factor??a.abcd_operational_factor);
+    if(af===null&&validClass(cls))af=cls==='A'?4:cls==='B'?3:cls==='C'?2:1;
+    const raw=[rf,nf,af].every(v=>v!==null)?rf*nf*af:null;
+    const norm=raw!==null?Math.max(0,Math.min(100,raw/60*100)):null;
+    const rYear=text(r.period_p1||r.analysis_period).slice(0,4),nYear=text(n.latest_survey_date||n.survey_date).slice(0,4);
+    const temporal=(rYear&&nYear&&rYear===nYear)?'ALIGNED':(rYear||nYear?'REVIEW':'UNKNOWN');
+    const mainFactor=text(n.main_factor).toLowerCase(),desired=text(n.desired_change).toLowerCase(),pname=text(a.primary_product_name||a.product_name);
+    const observedPref=mPref.get(k);const m=marketingEvidenceForCustomer(k);
+    let pref=observedPref||'Product';
+    if(!observedPref){if(mainFactor.includes('process')||desired.includes('delivery')||desired.includes('faster'))pref='Distribution';else if(['Gift Edition','Premium Pack','Limited Batch'].includes(pname))pref='Brand';else if(['Trial Format','Accessories'].includes(pname))pref='Price';}
+    const availability=norm!==null?96+3.5*norm/100:null,otif=norm!==null?94+5*norm/100:null,ack=norm!==null?24-20*norm/100:null,incident=norm!==null?12-10*norm/100:null,inv=norm!==null?97+2.5*norm/100:null;
+    const seg=spoSegmentMeta(norm);
+    const lineage=spoEvidenceExplanation(r,n,a,raw,norm,seg);
+    return {schema_version:'DOCROI_SPO_WORKING_1.0',dataset_id:'DOC_ROI_SPO_WORKING',customer_key:k,source_customer_id:r.source_customer_id||n.source_customer_id||a.source_customer_id||k,
+      rfm_dataset_id:r.dataset_id||'',nps_dataset_id:n.dataset_id||'',abcd_dataset_id:a.dataset_id||'',rfm_period:[r.period_p1,r.period_p2].filter(Boolean).join('/'),nps_latest_survey_date:n.latest_survey_date||n.survey_date||'',abcd_analysis_period:a.analysis_period||'',
+      rfm_segment:r.segment_p2||r.cognitive_segment||r.segment_p1||'',rfm_operational_factor:rf,nps_score:num(n.latest_nps_score??n.nps_score),nps_type:n.latest_nps_type||n.nps_type||'',nps_operational_factor:nf,primary_product_id:a.primary_product_id||a.product_id||'',primary_product_name:a.primary_product_name||a.product_name||'',abcd_class:cls,abcd_product_value_score:num(a.product_value_score??a.abcd_product_value_score),abcd_operational_factor:af,
+      spo_working_raw:raw,spo_working_normalized_100:norm,customer_product_revenue:num(a.customer_product_revenue),customer_product_margin:num(a.customer_product_margin),purchase_frequency:num(a.purchase_frequency),repeat_purchase_rate:num(a.repeat_purchase_rate),product_mix:a.product_mix||'',cross_sell_candidate:a.cross_sell_candidate||'',upsell_candidate:a.upsell_candidate||'',next_best_product:a.next_best_product||'',four_p_preference_operational:pref,
+      procurement_target_availability_pct:availability,procurement_target_supplier_otif_pct:otif,procurement_target_po_ack_hours:ack,procurement_target_incident_response_hours:incident,procurement_target_inventory_accuracy_pct:inv,temporal_alignment_status:temporal,
+      spo_service_segment:seg.code,spo_service_segment_label:seg.label,spo_service_segment_color_hex:seg.color,
+      rfm_content_score:num(r.content_rfm_score),rfm_transaction_score:num(r.transaction_rfm_score),rfm_post_sale_score:num(r.post_sale_rfm_score),rfm_cognitive_category:r.cognitive_category||'',rfm_cognitive_movement:r.cognitive_movement||'',rfm_segment_p1:r.segment_p1||'',rfm_segment_p2:r.segment_p2||'',rfm_recommended_action:r.recommended_action||'',rfm_recommended_channel:r.recommended_channel||'',rfm_arpu:num(r.arpu),rfm_estimated_cost:num(r.estimated_cost),
+      nps_previous_score:num(n.previous_nps_score),nps_previous_type:n.previous_nps_type||'',nps_movement:n.nps_movement||'',nps_main_factor:n.main_factor||'',nps_main_subfactor:n.main_subfactor||'',nps_desired_change:n.desired_change||'',nps_recommended_action:n.recommended_action||'',nps_membership_joined:n.membership_joined||'',nps_country:n.country||'',
+      abcd_margin_pct:num(a.margin_pct),abcd_strategic_relevance_score:num(a.strategic_relevance_score),abcd_cross_sell_potential:num(a.cross_sell_potential),abcd_upsell_potential:num(a.upsell_potential),abcd_evidence_status:a.evidence_status||'',
+      marketing_utm_source:m?m.utm_source||'':'',marketing_utm_medium:m?m.utm_medium||'':'',marketing_utm_campaign:m?m.utm_campaign||'':'',marketing_entry_4p:m?m.entry_4p||'':'',marketing_active_benefit_type:m?m.active_benefit_type||'':'',marketing_active_benefit_label:m?m.active_benefit_label||'':'',marketing_quantity:m?num(m.quantity):null,marketing_order_total:m?num(m.order_total):null,marketing_handoff_status:m?m.handoff_status||'':'',
+      spo_evidence_explanation:lineage,
+      method_note:'Operational Procurement implementation of formal SPO_i = CC_i × ABCD_i × NPS_i. The available RFM-derived factor feeds the operational CC layer; ABCD and NPS remain separate inputs. This working score does not redefine the formal variables.'};
+  });
+  const allMatch=rs.unique===ns.unique&&ns.unique===as.unique&&common.length===rs.unique&&rs.missing===0&&ns.missing===0&&as.missing===0&&rs.duplicates===0&&ns.duplicates===0&&as.duplicates===0;
+  renderIntegrationValidation({rs,ns,as,matched:common.length,allMatch,temporalReview:spoRows.filter(r=>r.temporal_alignment_status==='REVIEW').length});
+  return spoRows;
+}
+
+buildSPOWorking=function(){if(!spoActivated){spoRows=[];return []}return buildSPOWorkingV19()};
+
+const spoCRMRowsV18Base=spoCRMRows;
+spoCRMRows=function(){
+  if(spoActivated&&!spoRows.length)buildSPOWorkingV19();
+  const base=spoCRMRowsV18Base();
+  const bp=buyerPersonaRows.length?normalizeBuyerPersonaRow(buyerPersonaRows[0]):{};
+  const objectiveSummary=objectiveRows.map(o=>[o['Functional area']||o.functional_area||'',o['Main objective']||o.main_objective||o['Objective']||o.objective||o['Budget line']||o.budget_line||''].filter(Boolean).join(': ')).filter(Boolean).join(' | ');
+  return base.map(r=>({
+    ...r,
+    context_project:bp.project||'',context_product:bp.product||'',context_market:bp.market||'',context_buyer_persona:bp.working_label||bp.professional_role||'',context_central_need:bp.central_need||'',context_primary_demand:bp.primary_demand||'',context_risk:bp.risk||bp.web_friction||'',context_strategic_objectives:objectiveSummary
+  }));
+};
+
+downloadSPOCRM=function(){
+  if(!spoActivated||!spoRows.length){alert('Calculate SPO first.');return}
+  const rows=spoCRMRows();
+  const first=['customer_key','source_customer_id','spo_working_normalized_100','spo_service_segment','spo_service_segment_label','spo_service_segment_color_hex','spo_working_raw','rfm_segment','rfm_operational_factor','nps_score','nps_type','nps_operational_factor','primary_product_id','primary_product_name','abcd_class','abcd_product_value_score','abcd_operational_factor','four_p_preference_operational','spo_evidence_explanation'];
+  downloadFile('DOC_ROI_SPO_CRM.csv',toCSV(rows,unionHeaders(rows,first)));
+};
+
+renderSPOCharts=function(){
+  const host=$('spoVisuals');if(!host)return;
+  if(!spoActivated||!spoRows.length){host.innerHTML='';return}
+  const segCodes=['SPO-1','SPO-2','SPO-3','SPO-4'];
+  const groups=Object.fromEntries(segCodes.map(c=>[c,[]]));spoRows.forEach(r=>{if(groups[r.spo_service_segment])groups[r.spo_service_segment].push(r)});
+  const max=Math.max(1,...segCodes.map(c=>groups[c].length));
+  const avg=(arr,key)=>{const v=arr.map(x=>num(x[key])).filter(x=>x!==null);return v.length?v.reduce((a,b)=>a+b,0)/v.length:null};
+  const metaByCode={'SPO-1':spoSegmentMeta(75),'SPO-2':spoSegmentMeta(50),'SPO-3':spoSegmentMeta(25),'SPO-4':spoSegmentMeta(0)};
+  host.innerHTML=`<div class="spo-v19-chart"><div class="spo-v19-chart-head"><div><h3>SPO customer distribution</h3><p>X-axis = SPO service segment. Y-axis = number of matched customers. The chart uses the same customer population shown in the SPO.CRM table below.</p></div><div class="spo-crm-note">Population: <b>${spoRows.length}</b> customers</div></div><div class="spo-v19-bars">${segCodes.map(c=>{const n=groups[c].length,m=metaByCode[c];return `<div class="spo-v19-col"><div class="spo-v19-value">${n}</div><div class="spo-v19-bar" style="height:${Math.max(3,n/max*175)}px;background:${m.color}"></div><div class="spo-v19-label">${c}<br>${esc(m.label)}</div></div>`}).join('')}</div><div class="spo-v19-axis-note">Y = customers · X = SPO service segment</div><div class="spo-v19-driver-table"><table><thead><tr><th>Segment</th><th class="num">Customers</th><th class="num">Avg SPO</th><th class="num">Avg RFM factor</th><th class="num">Avg NPS factor</th><th class="num">Avg ABCD factor</th><th>Procurement meaning</th></tr></thead><tbody>${segCodes.map(c=>{const g=groups[c],m=metaByCode[c];const meaning=c==='SPO-1'?'Highest service protection and strictest supplier control.':c==='SPO-2'?'Enhanced service protection and tighter supplier monitoring.':c==='SPO-3'?'Managed protection with normal exception control.':'Standard protection; quantity remains demand-led.';return `<tr><td><span class="spo-segment-pill spo-seg-${m.rank}"><i></i>${c}</span></td><td class="num"><b>${g.length}</b></td><td class="num">${fmt(avg(g,'spo_working_normalized_100'))}</td><td class="num">${fmt(avg(g,'rfm_operational_factor'))}</td><td class="num">${fmt(avg(g,'nps_operational_factor'))}</td><td class="num">${fmt(avg(g,'abcd_operational_factor'))}</td><td>${meaning}</td></tr>`}).join('')}</tbody></table></div></div>`;
+};
+
+renderSPOCustomerPortfolio=function(){
+  const host=$('spoCustomerPortfolio'),legend=$('spoSegmentLegend');if(!host)return;
+  if(legend)legend.innerHTML=[{code:'SPO-1',label:'Priority Protection',range:'75–100',cls:'spo-seg-1'},{code:'SPO-2',label:'Enhanced Protection',range:'50–74.99',cls:'spo-seg-2'},{code:'SPO-3',label:'Managed Protection',range:'25–49.99',cls:'spo-seg-3'},{code:'SPO-4',label:'Standard Protection',range:'0–24.99',cls:'spo-seg-4'}].map(x=>`<span class="spo-segment-pill ${x.cls}"><i></i>${x.code} · ${x.label} · ${x.range}</span>`).join('');
+  if(!spoActivated||!spoRows.length){host.className='empty-state';host.innerHTML='<b>Customer portfolio not available</b>Validate RFM + NPS + ABCD and calculate SPO.';return}
+  const allowed=new Set(filteredSPORows().map(r=>r.customer_key));const crm=spoCRMRows().filter(r=>allowed.has(r.customer_key));
+  const first=['spo_service_segment','spo_working_normalized_100','customer_key','source_customer_id','rfm_segment','rfm_operational_factor','nps_score','nps_type','nps_operational_factor','primary_product_name','abcd_class','abcd_product_value_score','abcd_operational_factor','four_p_preference_operational','spo_evidence_explanation'];
+  const headers=unionHeaders(crm,first).filter(h=>h!=='spo_service_segment_color_hex');const rest=headers.filter(h=>!['spo_service_segment','spo_working_normalized_100'].includes(h));
+  host.className='spo-customer-table';
+  host.innerHTML=`<table><thead><tr><th>SPO</th>${rest.map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${crm.map(r=>{const meta=spoSegmentMeta(num(r.spo_working_normalized_100));const style=`background:${esc(r.spo_service_segment_color_hex||meta.color)};color:${meta.text}`;return `<tr><td class="spo-crm-segment-cell" style="${style}">${esc(r.spo_service_segment||meta.code)}<small>${esc(r.spo_service_segment_label||meta.label)} · ${fmt(num(r.spo_working_normalized_100),1)}</small></td>${rest.map(h=>{const v=r[h];return `<td class="spo-crm-value" title="${esc(v??'')}">${esc(v===null||v===undefined||v===''?'—':v)}</td>`}).join('')}</tr>`}).join('')}</tbody></table><div style="padding:9px 12px;font-size:10.5px;color:#607080">Showing ${crm.length} of ${spoRows.length} customer(s), ordered from highest to lowest SPO priority. Scroll vertically to review the complete population and horizontally to inspect the full lineage.</div><div class="spo-v19-bottom-download no-print"><button class="btn btn-secondary" onclick="printSPOCustomerPortfolio()">Print / Save SPO PDF</button><button class="btn btn-primary" onclick="downloadSPOCRM()">Download SPO.CRM CSV</button></div>`;
+};
+
+renderSPODemand=function(){
+  const host=$('spoDemandOutput'),kpis=$('spoDemandKpis');if(!host||!kpis)return;
+  if(!spoActivated||!spoRows.length){kpis.innerHTML='';if($('spoVisuals'))$('spoVisuals').innerHTML='';host.className='empty-state';host.innerHTML='<b>SPO result not available</b>Validate RFM + NPS + ABCD and calculate SPO.';renderSPOCustomerPortfolio();return}
+  const groups={'SPO-1':[],'SPO-2':[],'SPO-3':[],'SPO-4':[]};spoRows.forEach(r=>{if(groups[r.spo_service_segment])groups[r.spo_service_segment].push(r)});
+  kpis.innerHTML=['SPO-1','SPO-2','SPO-3','SPO-4'].map(c=>{const g=groups[c],av=g.map(r=>num(r.spo_working_normalized_100)).filter(v=>v!==null),meta=spoSegmentMeta(c==='SPO-1'?75:c==='SPO-2'?50:c==='SPO-3'?25:0);return `<div class="kpi ${c==='SPO-1'?'good':c==='SPO-4'?'warn':''}"><div class="lbl">${c} customers</div><div class="val">${g.length}</div><div class="sub">${meta.label} · avg ${av.length?fmt(av.reduce((a,b)=>a+b,0)/av.length):'—'}</div></div>`}).join('');
+  renderSPOCharts();renderSPOCustomerPortfolio();
+  const byOffer=commercialRows.map(r=>{const s=spoPriorityForScope(r.offer_id);return {offer:r.offer_name||r.offer_id,tag:r.four_p_tag,count:s.count,avg:s.avg,demand:computeDemand(r).demand}});
+  host.className='table-wrap';host.innerHTML=`<table><thead><tr><th>Commercial demand lens</th><th>4P</th><th class="num">Customers</th><th class="num">Avg SPO</th><th class="num">Commercial demand</th><th>Procurement reading</th></tr></thead><tbody>${byOffer.map(x=>`<tr><td><b>${esc(x.offer)}</b></td><td>${esc(x.tag)}</td><td class="num">${fmt(x.count,0)}</td><td class="num"><b>${fmt(x.avg)}</b></td><td class="num">${fmt(x.demand)}</td><td>${x.avg===null?'Unknown customer priority':x.avg>=75?'SPO-1: strict service protection and rapid exception handling.':x.avg>=50?'SPO-2: enhanced protection and tighter supplier control.':x.avg>=25?'SPO-3: managed protection and normal exception control.':'SPO-4: standard protection; do not inflate stock solely because of priority.'}</td></tr>`).join('')}</tbody></table>`;
+};
+
+calculateSPOFromGate=function(){
+  const st=spoSourceStatusV18();renderSPOSourceGateV18();
+  if(!st.valid){alert('SPO cannot be calculated yet. RFM, NPS and ABCD must contain the same unique customer_key population and valid operating factors.');return}
+  spoActivated=true;buildSPOWorkingV19();
+  recalculate();
+  // Rebuild once after recalculation so the active result is never lost by an upstream refresh.
+  spoActivated=true;buildSPOWorkingV19();
+  renderSPOSourceGateV18();renderSPODemand();renderSPOCustomerPortfolio();renderSPOCharts();
+  if($('spoResultsWrap'))$('spoResultsWrap').classList.remove('hidden');
+  requestAnimationFrame(()=>{const node=$('spoResultsWrap');if(node)node.scrollIntoView({behavior:'auto',block:'start'})});
+};
 
 window.addEventListener('load',()=>{resetSession(false);activateTab((location.hash||'#sec0').slice(1),false)});
 </script>
