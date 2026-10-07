@@ -263,7 +263,7 @@ html{scroll-padding-top:96px;scroll-behavior:auto!important}
   <div class="wrap topbar-inner">
     <a class="brand-logo" href="https://doc-roi-my-cabinet.vercel.app/" aria-label="DOC ROI My Cabinet"><img src="https://docroi.marketing/wp-content/uploads/2026/07/Logo_Negro_DoC_ROI.jpg" alt="DOC ROI"></a>
     <nav class="nav" id="mainNav" aria-label="Primary navigation">
-      <a href="#sec0">Inputs</a><a href="#sec2">Product Intelligence</a><a href="#sec5">Purchase Orders</a><a href="#sec6">SLA</a><a class="header-action" href="#sec0">Open Tool</a>
+      <a href="#sec0">Inputs</a><a href="#sec2">Product Intelligence</a><a href="#sec5">Purchase Orders</a><a href="#sec6">Management</a><a class="header-action" href="#sec0">Open Tool</a>
     </nav>
     <button class="hamb" type="button" aria-label="Open navigation" aria-controls="mainNav" aria-expanded="false">☰</button>
   </div>
@@ -307,8 +307,7 @@ html{scroll-padding-top:96px;scroll-behavior:auto!important}
         <button data-target="sec3" role="tab" aria-selected="false"><span>02</span><b>Demand</b><small>SPO-informed view</small></button>
         <button data-target="sec4" role="tab" aria-selected="false"><span>03</span><b>Purchase plan</b><small>Quantity + timing</small></button>
         <button data-target="sec5" role="tab" aria-selected="false"><span>04</span><b>Purchase orders</b><small>Supplier outputs</small></button>
-        <button data-target="sec6" role="tab" aria-selected="false"><span>05</span><b>Service-Level Agreement</b><small>SLA + contract</small></button>
-        <button data-target="sec7" role="tab" aria-selected="false"><span>06</span><b>Management</b><small>Control tower</small></button>
+        <button data-target="sec6" role="tab" aria-selected="false"><span>05</span><b>Management</b><small>Control tower</small></button>
       </div>
       <div class="tab-rail-note"><b>One step at a time.</b><br>Only the selected stage is shown. Your data remains in the same canonical session state while you move between tabs.</div>
     </aside>
@@ -451,35 +450,21 @@ html{scroll-padding-top:96px;scroll-behavior:auto!important}
   <div id="poGrid" class="po-grid"><div class="empty-state"><b>No purchase orders yet</b>Complete the supplier mapping and demand plan.</div></div>
 <div class="tab-nav-row no-print"><button class="btn btn-secondary" onclick="activateTab('sec4')">← Previous</button><button class="btn btn-primary" onclick="activateTab('sec6')">Next →</button></div></div></section>
 
-<section class="section" id="sec6"><div class="section-shell">
-  <div class="section-h"><div><h2>05 · Service-Level Agreement + Signature-Ready Contract</h2><p>Each purchase requirement creates a service requirement. Compass tightens supplier-specific SLA targets as the SPO service priority of the protected customer demand increases, then builds a personalised agreement that both parties can review, print and sign.</p></div><span class="tag">OUTPUT 2 · SLA + CONTRACT</span></div>
-  <div class="grid3">
-    <div class="card"><h3>Buyer identity</h3><div class="field"><label>Buyer legal / business name</label><input id="buyerName" placeholder="Required for signature-ready contract" oninput="recalculate()"></div><div class="field"><label>Buyer tax / registration ID</label><input id="buyerTaxId" placeholder="Missing evidence" oninput="recalculate()"></div><div class="field"><label>Buyer address</label><textarea id="buyerAddress" placeholder="Missing evidence" oninput="recalculate()"></textarea></div></div>
-    <div class="card"><h3>Governance</h3><div class="field"><label>Effective date</label><input id="effectiveDate" type="date" oninput="recalculate()"></div><div class="field"><label>Review cadence</label><select id="reviewCadence" onchange="recalculate()"><option value="">Select</option><option>Weekly operations review</option><option>Monthly service review</option><option>Quarterly business review</option></select></div><div class="field"><label>Jurisdiction / legal framework</label><input id="jurisdiction" placeholder="To be confirmed" oninput="recalculate()"></div></div>
-    <div class="card"><h3>Measurement & remedies</h3><div class="field"><label>Evidence source</label><input id="slaDataSource" placeholder="PO log + ASN + WMS + CRM..." oninput="recalculate()"></div><div class="field"><label>Exclusions / assumptions</label><textarea id="slaExclusions" placeholder="Force majeure, customer-caused delay..." oninput="recalculate()"></textarea></div><div class="field"><label>Remedy / service-credit note</label><textarea id="slaRemedy" placeholder="Optional. No penalty is invented automatically." oninput="recalculate()"></textarea></div></div>
-  </div>
-  <div class="grid4" style="margin-top:16px">
-    <div class="field"><label>Supplier OTIF target (%)</label><input id="slaOtif" type="number" min="0" max="100" placeholder="e.g. 95" oninput="recalculate()"></div>
-    <div class="field"><label>PO acknowledgement (h)</label><input id="slaAck" type="number" min="0" placeholder="e.g. 24" oninput="recalculate()"></div>
-    <div class="field"><label>Documentation completeness (%)</label><input id="slaDocs" type="number" min="0" max="100" placeholder="e.g. 100" oninput="recalculate()"></div>
-    <div class="field"><label>Batch traceability (%)</label><input id="slaTrace" type="number" min="0" max="100" placeholder="e.g. 100" oninput="recalculate()"></div>
-    <div class="field"><label>Incoming quality (%)</label><input id="slaQuality" type="number" min="0" max="100" placeholder="e.g. 99" oninput="recalculate()"></div>
-    <div class="field"><label>Inventory accuracy (%)</label><input id="slaInventory" type="number" min="0" max="100" placeholder="e.g. 99" oninput="recalculate()"></div>
-    <div class="field"><label>Max. breakage / loss (%)</label><input id="slaBreakage" type="number" min="0" max="100" placeholder="e.g. 0.5" oninput="recalculate()"></div>
-    <div class="field"><label>Critical incident response (h)</label><input id="slaIncident" type="number" min="0" placeholder="e.g. 4" oninput="recalculate()"></div>
-  </div>
-  <div class="toolbar no-print" style="margin:16px 0"><button class="btn btn-secondary" onclick="applySuggestedSLA()">Use Suggested SLA Targets</button><button class="btn btn-secondary" onclick="downloadSLACSV()">Download SLA Handover CSV</button><button class="btn btn-primary" onclick="printAllContracts()">Print All Contracts / Save PDF</button></div>
-  <div class="note" style="margin-bottom:16px"><b>SLA source.</b> Compass keeps the core SLA management logic — replenishment lead time, customer delivery, order acceptance, stock availability, returns, incident response and customer rating — and adds Procurement gates such as OTIF, documentation, traceability, incoming quality, inventory accuracy and breakage/loss. Higher customer-level SPO service priority tightens working SLA targets continuously; it does not create automatic penalties. Actual performance remains unknown until execution evidence exists.</div>
-  <div id="slaGrid" class="sla-matrix"><div class="empty-state"><b>SLA portfolio not generated</b>Purchase plans are required first.</div></div>
-  <div class="contract-grid" id="contractGrid" style="margin-top:18px"><div class="empty-state"><b>Contracts not generated</b>Complete supplier and buyer data to create signature-ready drafts.</div></div>
-<div class="tab-nav-row no-print"><button class="btn btn-secondary" onclick="activateTab('sec5')">← Previous</button><button class="btn btn-primary" onclick="activateTab('sec7')">Next →</button></div></div></section>
+<div class="hidden" aria-hidden="true" id="slaCompatibilityState">
+  <input id="buyerName" type="hidden"><input id="buyerTaxId" type="hidden"><input id="buyerAddress" type="hidden">
+  <input id="effectiveDate" type="hidden"><input id="reviewCadence" type="hidden"><input id="jurisdiction" type="hidden">
+  <input id="slaDataSource" type="hidden"><input id="slaExclusions" type="hidden"><input id="slaRemedy" type="hidden">
+  <input id="slaOtif" type="hidden"><input id="slaAck" type="hidden"><input id="slaDocs" type="hidden"><input id="slaTrace" type="hidden">
+  <input id="slaQuality" type="hidden"><input id="slaInventory" type="hidden"><input id="slaBreakage" type="hidden"><input id="slaIncident" type="hidden">
+  <div id="slaGrid"></div><div id="contractGrid"></div>
+</div>
 
-<section class="section" id="sec7"><div class="section-shell">
-  <div class="section-h"><div><h2>06 · Procurement Control Tower</h2><p>Final management view connecting customer-level RFM + NPS + ABCD, operational SPO priority, demand, purchase commitments, supplier exposure, cash, lead time, evidence quality and SLA readiness.</p></div><span class="tag">OUTPUT 3 · MANAGEMENT</span></div>
+<section class="section" id="sec6"><div class="section-shell">
+  <div class="section-h"><div><h2>05 · Procurement Control Tower</h2><p>Final management view connecting customer-level RFM + NPS + ABCD, operational SPO priority, demand, purchase commitments, supplier exposure, cash, lead time, evidence quality and SLA readiness.</p></div><span class="tag">OUTPUT 3 · MANAGEMENT</span></div>
   <div class="kpis" id="controlKpis"></div>
   <div class="grid2" style="margin-top:16px"><div class="card"><h3>ABCD management reading</h3><div id="controlABCD">—</div></div><div class="card"><h3>Procurement gates</h3><div id="controlGates">—</div></div></div>
-  <div class="toolbar no-print" style="margin-top:16px"><button class="btn btn-secondary" onclick="downloadDashboardCSV()">Download Full Data Model CSV</button><button class="btn btn-primary" onclick="printSection('sec7')">Print / Save PDF</button></div>
-<div class="tab-nav-row no-print"><button class="btn btn-secondary" onclick="activateTab('sec6')">← Previous</button><button class="btn btn-secondary" onclick="activateTab('sec0')">Return to start ↑</button></div></div></section>
+  <div class="toolbar no-print" style="margin-top:16px"><button class="btn btn-secondary" onclick="downloadDashboardCSV()">Download Full Data Model CSV</button><button class="btn btn-primary" onclick="printSection('sec6')">Print / Save PDF</button></div>
+<div class="tab-nav-row no-print"><button class="btn btn-secondary" onclick="activateTab('sec5')">← Previous</button><button class="btn btn-secondary" onclick="activateTab('sec0')">Return to start ↑</button></div></div></section>
 </main>
   </div>
 </div>
@@ -1096,7 +1081,7 @@ function printSection(id){printElement(id)}
 function resetSession(scroll=true){marketingRows=[];objectiveRows=[];buyerPersonaRows=[];commercialRows=[];rfmRows=[];npsRows=[];abcdCustomerRows=[];spoRows=[];suppliers=[];model={};supplierSeq=1;['buyerPersona','buyerContext','buyerName','buyerTaxId','buyerAddress','effectiveDate','jurisdiction','slaDataSource','slaExclusions','slaRemedy','slaOtif','slaAck','slaDocs','slaTrace','slaQuality','slaInventory','slaBreakage','slaIncident'].forEach(id=>{if($(id))$(id).value=''});if($('reviewCadence'))$('reviewCadence').value='';$('commercialFileState').textContent='No Marketing-to-Purchase handoff loaded. The session is empty.';if($('rfmFileState'))$('rfmFileState').textContent='No RFM file loaded.';if($('npsFileState'))$('npsFileState').textContent='No NPS file loaded.';if($('abcdCustomerFileState'))$('abcdCustomerFileState').textContent='ABCD not generated yet.';if($('buyerPersonaFileState'))$('buyerPersonaFileState').textContent='Recommended file not loaded.';renderBuyerPersonaSnapshot();renderManualEditor(false);renderSuppliers();recalculate();if(scroll)activateTab('sec0')}
 
 const menuButton=document.querySelector('.hamb'),mainNav=$('mainNav');if(menuButton&&mainNav){menuButton.addEventListener('click',()=>{const open=mainNav.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open))});mainNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mainNav.classList.remove('open');menuButton.setAttribute('aria-expanded','false')}))}
-const TAB_IDS=['sec0','sec2','sec3','sec4','sec5','sec6','sec7'];
+const TAB_IDS=['sec0','sec2','sec3','sec4','sec5','sec6'];
 function workspaceTop(){const ws=document.querySelector('.workspace-wrap');if(!ws)return 0;const header=document.querySelector('.topbar');const top=ws.getBoundingClientRect().top+window.pageYOffset;const offset=(header?.offsetHeight||68)+14;return Math.max(0,top-offset)}
 function activateTab(target,scroll=true){if(!TAB_IDS.includes(target))return;
   if(scroll)window.scrollTo({top:workspaceTop(),behavior:'auto'});
